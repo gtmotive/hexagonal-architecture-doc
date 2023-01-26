@@ -21,6 +21,7 @@ namespace GtMotive.Estimate.Microservice.Api
             if (options == null)
             {
                 throw new ArgumentNullException(nameof(options));
+                throw new ArgumentNullException(nameof(options));
             }
 
             options.Filters.Add<BusinessExceptionFilter>();

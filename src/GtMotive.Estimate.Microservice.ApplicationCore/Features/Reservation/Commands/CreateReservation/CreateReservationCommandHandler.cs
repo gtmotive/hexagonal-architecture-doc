@@ -33,7 +33,7 @@ namespace GtMotive.Estimate.Microservice.ApplicationCore.Features.Reservation.Co
         /// </summary>
         /// <param name="request">CreateReservationCommand.</param>
         /// <param name="cancellationToken">CancellationToken.</param>
-        /// <returns>int?.</returns>
+        /// <returns>new reservation id or null.</returns>
         public async Task<int?> Handle(CreateReservationCommand request, CancellationToken cancellationToken)
         {
             if (request == null)

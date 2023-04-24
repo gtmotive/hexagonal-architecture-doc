@@ -28,7 +28,7 @@ namespace GtMotive.Estimate.Microservice.ApplicationCore.Features.Reservation.Co
         /// </summary>
         /// <param name="request">DeleteReservationCommand.</param>
         /// <param name="cancellationToken">CancellationToken.</param>
-        /// <returns>int?.</returns>
+        /// <returns>bool.</returns>
         public async Task<bool> Handle(DeleteReservationCommand request, CancellationToken cancellationToken)
         {
             if (request == null)

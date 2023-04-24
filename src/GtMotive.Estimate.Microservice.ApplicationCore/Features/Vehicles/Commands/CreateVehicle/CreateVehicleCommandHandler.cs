@@ -32,7 +32,7 @@ namespace GtMotive.Estimate.Microservice.ApplicationCore.Features.Vehicles.Comma
         /// </summary>
         /// <param name="request">CreateVehicleCommand.</param>
         /// <param name="cancellationToken">CancellationToken.</param>
-        /// <returns>int?.</returns>
+        /// <returns>new vehicle id or null.</returns>
         public async Task<int?> Handle(CreateVehicleCommand request, CancellationToken cancellationToken)
         {
             if (request == null)

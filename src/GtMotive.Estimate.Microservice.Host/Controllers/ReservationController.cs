@@ -54,7 +54,7 @@ namespace GtMotive.Estimate.Microservice.Host.Controllers
         }
 
         /// <summary>
-        /// Create new vehicle reservation by user authenticated.
+        /// Create new vehicle reservation using authenticated user.
         /// </summary>
         /// <param name="command">Vehicle Reservation request.</param>
         /// <returns>Id (int).</returns>

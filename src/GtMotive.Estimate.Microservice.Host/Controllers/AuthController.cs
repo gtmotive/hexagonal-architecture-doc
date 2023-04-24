@@ -39,9 +39,9 @@ namespace GtMotive.Estimate.Microservice.Host.Controllers
         }
 
         /// <summary>
-        /// SignUp.
+        /// Create new user with name, email and password.
         /// </summary>
-        /// <param name="userSignUpResource">UserSignUpResource.</param>
+        /// <param name="userSignUpResource">UserSignUpResource (Email, fistname, lastname, password).</param>
         /// <returns>IActionResult.</returns>
         [HttpPost("signup")]
         public async Task<IActionResult> SignUp(UserSignUpResource userSignUpResource)
@@ -57,7 +57,12 @@ namespace GtMotive.Estimate.Microservice.Host.Controllers
             return userCreateResult.Succeeded ? Ok() : Problem(userCreateResult.Errors.First().Description, null, 500);
         }
 
-        [HttpPost("signIn")]
+        /// <summary>
+        /// Login with email and password - Get JWT Token.
+        /// </summary>
+        /// <param name="userLoginResource">Email and Password.</param>
+        /// <returns>Returns JWT Token.</returns>
+        [HttpPost("signin")]
         public async Task<IActionResult> SignIn(UserLoginResource userLoginResource)
         {
             if (userLoginResource == null)

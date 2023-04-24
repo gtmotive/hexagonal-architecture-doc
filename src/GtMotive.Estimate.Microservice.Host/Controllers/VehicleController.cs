@@ -32,7 +32,7 @@ namespace GtMotive.Estimate.Microservice.Host.Controllers
         }
 
         /// <summary>
-        /// Get all vehicles.
+        /// Get all available and not expired vehicles.
         /// </summary>
         /// <returns>List VehicleResponse.</returns>
         [HttpGet]
@@ -45,7 +45,7 @@ namespace GtMotive.Estimate.Microservice.Host.Controllers
         }
 
         /// <summary>
-        /// Get vehicle by id.
+        /// Get vehicle information by id.
         /// </summary>
         /// <param name="id">Vehicle id.</param>
         /// <returns>VehicleResponse.</returns>

@@ -1,21 +1,27 @@
 ﻿using System;
 using System.IdentityModel.Tokens.Jwt;
+using System.IO;
+using System.Reflection;
+using System.Text;
 using Azure.Extensions.AspNetCore.Configuration.Secrets;
 using Azure.Identity;
 using Azure.Security.KeyVault.Secrets;
 using GtMotive.Estimate.Microservice.Api;
-using GtMotive.Estimate.Microservice.Host.Configuration;
+using GtMotive.Estimate.Microservice.ApplicationCore.Identity.Models;
 using GtMotive.Estimate.Microservice.Host.DependencyInjection;
 using GtMotive.Estimate.Microservice.Infrastructure;
 using GtMotive.Estimate.Microservice.Infrastructure.MongoDb.Settings;
-using IdentityServer4.AccessTokenValidation;
 using Microsoft.ApplicationInsights.Extensibility;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.Net.Http.Headers;
+using Microsoft.OpenApi.Models;
 using Serilog;
 using Serilog.Events;
 using Serilog.Sinks.SystemConsole.Themes;
@@ -50,17 +56,66 @@ if (!builder.Environment.IsDevelopment())
     builder.Services.AddApplicationInsightsKubernetesEnricher();
 }
 
+builder.Services.AddSwaggerGen(
+    c =>
+    {
+        c.SwaggerDoc("v1", new OpenApiInfo { Title = "GtMotive Technical Test", Version = "v1" });
+        var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+        c.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
+        c.AddSecurityDefinition(
+            "token",
+            new OpenApiSecurityScheme
+            {
+                Type = SecuritySchemeType.Http,
+                BearerFormat = "JWT",
+                Scheme = "Bearer",
+                In = ParameterLocation.Header,
+                Name = HeaderNames.Authorization
+            });
+        c.AddSecurityRequirement(
+            new OpenApiSecurityRequirement
+            {
+                {
+                    new OpenApiSecurityScheme
+                    {
+                        Reference = new OpenApiReference
+                        {
+                            Type = ReferenceType.SecurityScheme,
+                            Id = "token"
+                        },
+                    },
+                    Array.Empty<string>()
+                }
+            });
+    });
+
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-
-var appSettingsSection = builder.Configuration.GetSection("AppSettings");
-builder.Services.Configure<AppSettings>(appSettingsSection);
-var appSettings = appSettingsSection.Get<AppSettings>();
 builder.Services.Configure<MongoDbSettings>(builder.Configuration.GetSection("MongoDb"));
 
 builder.Services.AddControllers(ApiConfiguration.ConfigureControllers)
     .WithApiControllers();
+
+builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("Jwt"));
+
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(options =>
+{
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuerSigningKey = true,
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateLifetime = true,
+        ClockSkew = TimeSpan.Zero,
+        ValidIssuer = builder.Configuration["Jwt:Issuer"],
+        ValidAudience = builder.Configuration["Jwt:Audience"],
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Secret"]))
+    };
+});
 
 builder.Services.AddBaseInfrastructure(builder.Environment.IsDevelopment());
 
@@ -77,19 +132,6 @@ builder.Services.Configure<ForwardedHeadersOptions>(options =>
 });
 
 JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
-
-builder.Services.AddAuthentication(options =>
-    {
-        options.DefaultScheme = IdentityServerAuthenticationDefaults.AuthenticationScheme;
-    })
-    .AddIdentityServerAuthentication(options =>
-    {
-        options.Authority = appSettings.JwtAuthority;
-        options.ApiName = "estimate-api";
-        options.SupportedTokens = SupportedTokens.Jwt;
-    });
-
-builder.Services.AddSwagger(appSettings, builder.Configuration);
 
 var app = builder.Build();
 
@@ -128,10 +170,12 @@ if (app.Environment.IsDevelopment())
     app.UseDeveloperExceptionPage();
 }
 
-app.UseSwaggerInApplication(pathBase, builder.Configuration);
-app.UseRouting();
+app.UseSwagger();
+app.UseSwaggerUI();
+
 app.UseAuthentication();
 app.UseAuthorization();
+
 app.MapControllers();
 
 app.Run();

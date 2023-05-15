@@ -4,6 +4,7 @@ using System.Reflection;
 using GtMotive.Estimate.Microservice.Host.Configuration;
 using GtMotive.Estimate.Microservice.Host.Infrastructure.Swagger;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Mvc.Controllers;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
@@ -67,6 +68,23 @@ namespace GtMotive.Estimate.Microservice.Host.DependencyInjection
 
                         options.OperationFilter<IdentityServerApiSecurityOperationFilter>();
                     }
+
+                    options.TagActionsBy(api =>
+                    {
+                        if (api.GroupName != null)
+                        {
+                            return new[] { api.GroupName };
+                        }
+
+                        if (api.ActionDescriptor is ControllerActionDescriptor controllerActionDescriptor)
+                        {
+                            return new[] { controllerActionDescriptor.ControllerName };
+                        }
+
+                        throw new InvalidOperationException("Unable to determine tag for endpoint.");
+                    });
+
+                    options.DocInclusionPredicate((name, api) => true);
                 });
 
             return services;

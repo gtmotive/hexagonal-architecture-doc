@@ -1,0 +1,14 @@
+﻿// This file is used by Code Analysis to maintain SuppressMessage
+// attributes that are applied to this project.
+// Project-level suppressions either have no target or are given
+// a specific target and scoped to a namespace, type, member, etc.
+
+using System.Diagnostics.CodeAnalysis;
+
+[assembly: SuppressMessage("Performance", "CA1848:Use the LoggerMessage delegates", Justification = "Not Relevant", Scope = "member", Target = "~M:GtMotive.Estimate.Microservice.Api.Controllers.FleetsController.CreateAsync(GtMotive.Estimate.Microservice.Api.UseCases.CreateFleet.CreateFleetRequest)~System.Threading.Tasks.Task{Microsoft.AspNetCore.Mvc.IActionResult}")]
+[assembly: SuppressMessage("Performance", "CA1848:Use the LoggerMessage delegates", Justification = "Not Relevant", Scope = "member", Target = "~M:GtMotive.Estimate.Microservice.Api.Controllers.VehiclesController.GetAllAvailableVehiclesAsync(System.Int32)~System.Threading.Tasks.Task{Microsoft.AspNetCore.Mvc.IActionResult}")]
+[assembly: SuppressMessage("Performance", "CA1848:Use the LoggerMessage delegates", Justification = "Not Relevant", Scope = "member", Target = "~M:GtMotive.Estimate.Microservice.Api.Controllers.VehiclesController.CreateAsync(System.Int32,GtMotive.Estimate.Microservice.Api.UseCases.CreateVehicle.CreateVehicleRequest)~System.Threading.Tasks.Task{Microsoft.AspNetCore.Mvc.IActionResult}")]
+[assembly: SuppressMessage("Design", "CA1062:Validate arguments of public methods", Justification = "Not Relevant", Scope = "member", Target = "~M:GtMotive.Estimate.Microservice.Api.Controllers.VehiclesController.CreateAsync(System.Int32,GtMotive.Estimate.Microservice.Api.UseCases.CreateVehicle.CreateVehicleRequest)~System.Threading.Tasks.Task{Microsoft.AspNetCore.Mvc.IActionResult}")]
+[assembly: SuppressMessage("Performance", "CA1848:Use the LoggerMessage delegates", Justification = "Not Relevant", Scope = "member", Target = "~M:GtMotive.Estimate.Microservice.Api.Controllers.RentalsController.CreateAsync(GtMotive.Estimate.Microservice.Api.UseCases.CreateRental.CreateRentalRequest)~System.Threading.Tasks.Task{Microsoft.AspNetCore.Mvc.IActionResult}")]
+[assembly: SuppressMessage("Design", "CA1062:Validate arguments of public methods", Justification = "Not Relevant", Scope = "member", Target = "~M:GtMotive.Estimate.Microservice.Api.UseCases.CreateRental.CreateRentalRequestHandler.Handle(GtMotive.Estimate.Microservice.Api.UseCases.CreateRental.CreateRentalRequest,System.Threading.CancellationToken)~System.Threading.Tasks.Task{GtMotive.Estimate.Microservice.Api.UseCases.IWebApiPresenter}")]
+[assembly: SuppressMessage("Performance", "CA1848:Use the LoggerMessage delegates", Justification = "Not Relevant", Scope = "member", Target = "~M:GtMotive.Estimate.Microservice.Api.Controllers.RentalsController.DeleteAsync(System.Int32)~System.Threading.Tasks.Task{Microsoft.AspNetCore.Mvc.IActionResult}")]

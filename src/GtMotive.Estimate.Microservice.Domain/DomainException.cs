@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Diagnostics.CodeAnalysis;
 
-[assembly: CLSCompliant(false)]
-
 namespace GtMotive.Estimate.Microservice.Domain
 {
     /// <summary>

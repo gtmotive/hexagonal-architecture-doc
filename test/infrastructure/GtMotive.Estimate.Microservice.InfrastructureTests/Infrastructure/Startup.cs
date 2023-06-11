@@ -24,7 +24,9 @@ namespace GtMotive.Estimate.Microservice.InfrastructureTests.Infrastructure
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public static void Configure(IApplicationBuilder app)
+#pragma warning disable CA1822
+        public void Configure(IApplicationBuilder app)
+#pragma warning restore CA1822
         {
             app.UseRouting();
 
@@ -39,7 +41,9 @@ namespace GtMotive.Estimate.Microservice.InfrastructureTests.Infrastructure
 
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
-        public static void ConfigureServices(IServiceCollection services)
+#pragma warning disable CA1822
+        public void ConfigureServices(IServiceCollection services)
+#pragma warning restore CA1822
         {
             services.AddMediatR(typeof(Startup).GetTypeInfo().Assembly);
 

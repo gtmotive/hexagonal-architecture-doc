@@ -3,7 +3,9 @@ using System.IdentityModel.Tokens.Jwt;
 using Azure.Extensions.AspNetCore.Configuration.Secrets;
 using Azure.Identity;
 using Azure.Security.KeyVault.Secrets;
+using FluentValidation;
 using GtMotive.Estimate.Microservice.Api;
+using GtMotive.Estimate.Microservice.Api.UseCases.BookVehicleUseCase;
 using GtMotive.Estimate.Microservice.Host.Configuration;
 using GtMotive.Estimate.Microservice.Host.DependencyInjection;
 using GtMotive.Estimate.Microservice.Infrastructure;
@@ -90,6 +92,7 @@ builder.Services.AddAuthentication(options =>
     });
 
 builder.Services.AddSwagger(appSettings, builder.Configuration);
+builder.Services.AddScoped<IValidator<BookVehicleRequest>, BookVehicleValidator>();
 
 var app = builder.Build();
 

@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Diagnostics.CodeAnalysis;
 using GtMotive.Estimate.Microservice.Domain.Interfaces;
+using GtMotive.Estimate.Microservice.Domain.Repositories;
 using GtMotive.Estimate.Microservice.Infrastructure.Interfaces;
 using GtMotive.Estimate.Microservice.Infrastructure.Logging;
+using GtMotive.Estimate.Microservice.Infrastructure.MongoDb;
+using GtMotive.Estimate.Microservice.Infrastructure.Repositories;
 using GtMotive.Estimate.Microservice.Infrastructure.Telemetry;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -36,9 +39,18 @@ namespace GtMotive.Estimate.Microservice.Infrastructure
             public InfrastructureBuilder(IServiceCollection services)
             {
                 Services = services;
+
+                AddRepositories();
             }
 
             public IServiceCollection Services { get; }
+
+            private void AddRepositories()
+            {
+                Services.AddSingleton<IAppDbContext, AppDbContext>();
+                Services.AddSingleton<ICustomerRepository, CustomerRepository>();
+                Services.AddSingleton<IVehicleRepository, VehicleRepository>();
+            }
         }
     }
 }

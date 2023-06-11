@@ -3,7 +3,7 @@
 namespace GtMotive.Estimate.Microservice.FunctionalTests.Infrastructure
 {
     [CollectionDefinition(TestCollections.Functional)]
-    public class CompositionRootCollectionFixture : ICollectionFixture<CompositionRootTestFixture>
+    public class CompositionRootCollectionFixture : ICollectionFixture<FunctionalTestBase>
     {
     }
 }

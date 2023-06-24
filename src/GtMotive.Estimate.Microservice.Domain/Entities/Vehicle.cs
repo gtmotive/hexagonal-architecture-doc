@@ -16,12 +16,12 @@ namespace GtMotive.Estimate.Microservice.Domain.Entities
         /// <summary>
         /// Gets or sets vehicle brand.
         /// </summary>
-        public string Marca { get; set; }
+        public string Brand { get; set; }
 
         /// <summary>
-        /// Gets or sets vehicle model.
+        /// Gets or sets vehicle manufactoring date.
         /// </summary>
-        public string Model { get; set; }
+        public DateTime ManufacturingDate { get; set; }
 
         /// <summary>
         /// Gets vehicles rentals.

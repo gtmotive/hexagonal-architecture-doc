@@ -3,13 +3,13 @@
     /// <summary>
     /// Containts the signature for deletable methods.
     /// </summary>
-    /// <typeparam name="TEntityId">TEntity Identify to make deletable.</typeparam>
-    public interface IDeletable<in TEntityId>
+    /// <typeparam name="TEntity">TEntity to make deletable.</typeparam>
+    public interface IDeletable<in TEntity>
     {
         /// <summary>
         /// Signature to delete one entity by id.
         /// </summary>
-        /// <param name="id">TEntity Identify to delete.</param>
-        void Delete(TEntityId id);
+        /// <param name="entity">TEntity to delete.</param>
+        void Delete(TEntity entity);
     }
 }

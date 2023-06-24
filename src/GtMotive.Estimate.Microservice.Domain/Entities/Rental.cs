@@ -10,12 +10,12 @@ namespace GtMotive.Estimate.Microservice.Domain.Entities
         /// <summary>
         /// Gets or Sets the rented vehicle Identify.
         /// </summary>
-        public Guid VehicleId { get; set; }
+        public int VehicleId { get; set; }
 
         /// <summary>
         /// Gets or Sets the reting client Identify.
         /// </summary>
-        public Guid ClientId { get; set; }
+        public int ClientId { get; set; }
 
         /// <summary>
         /// Gets or Sets the reference of the rented vehicle.

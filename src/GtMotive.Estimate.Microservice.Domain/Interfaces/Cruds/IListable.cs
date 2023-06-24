@@ -6,8 +6,7 @@ namespace GtMotive.Estimate.Microservice.Domain.Interfaces.Cruds
     /// Containts the signature for list methods.
     /// </summary>
     /// <typeparam name="TEntity">TEntity to make listable.</typeparam>
-    /// <typeparam name="TEntityId">TEntity Identify to make listable.</typeparam>
-    public interface IListable<TEntity, TEntityId>
+    public interface IListable<TEntity>
     {
         /// <summary>
         /// asdasdasd.
@@ -20,6 +19,6 @@ namespace GtMotive.Estimate.Microservice.Domain.Interfaces.Cruds
         /// </summary>
         /// <param name="id">Entity id to select.</param>
         /// <returns>TEntity selected.</returns>
-        TEntity SelectById(TEntityId id);
+        TEntity SelectById(int id);
     }
 }

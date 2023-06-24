@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 
 namespace GtMotive.Estimate.Microservice.Domain.Entities
 {
@@ -11,7 +10,7 @@ namespace GtMotive.Estimate.Microservice.Domain.Entities
         /// <summary>
         /// Gets or Sets client Identify.
         /// </summary>
-        public Guid ClientId { get; set; }
+        public int ClientId { get; set; }
 
         /// <summary>
         /// Gets or Sets client name.

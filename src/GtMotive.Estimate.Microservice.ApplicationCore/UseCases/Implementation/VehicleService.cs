@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.ObjectModel;
+using GtMotive.Estimate.Microservice.ApplicationCore.UseCases.Interfaces.Repositories;
 using GtMotive.Estimate.Microservice.Domain.Entities;
-using GtMotive.Estimate.Microservice.Domain.Interfaces.Repositories;
 
 namespace GtMotive.Estimate.Microservice.ApplicationCore.UseCases.Implementation
 {
@@ -10,13 +10,13 @@ namespace GtMotive.Estimate.Microservice.ApplicationCore.UseCases.Implementation
     /// </summary>
     public class VehicleService : IVehicleService
     {
-        private readonly IRepository<Vehicle, Guid> _repoVehicle;
+        private readonly IVehicleRepository _repoVehicle;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="VehicleService"/> class.
         /// </summary>
         /// <param name="repoVehicle">vehicle Repository.</param>
-        public VehicleService(IRepository<Vehicle, Guid> repoVehicle)
+        public VehicleService(IVehicleRepository repoVehicle)
         {
             _repoVehicle = repoVehicle;
         }
@@ -54,7 +54,7 @@ namespace GtMotive.Estimate.Microservice.ApplicationCore.UseCases.Implementation
         /// </summary>
         /// <param name="id">vehicle Identify.</param>
         /// <returns>Vehicle selected.</returns>
-        public Vehicle SelectById(Guid id)
+        public Vehicle SelectById(int id)
         {
             return _repoVehicle.SelectById(id);
         }

@@ -1,5 +1,4 @@
-﻿using System;
-using GtMotive.Estimate.Microservice.Domain.Entities;
+﻿using GtMotive.Estimate.Microservice.Domain.Entities;
 using GtMotive.Estimate.Microservice.Domain.Interfaces.Cruds;
 
 namespace GtMotive.Estimate.Microservice.ApplicationCore.UseCases
@@ -8,7 +7,7 @@ namespace GtMotive.Estimate.Microservice.ApplicationCore.UseCases
     /// Rental services.
     /// </summary>
     public interface IRentalService
-        : IAddable<Rental>, IListable<Rental, Guid>, IDeletable<Rental>
+        : IAddable<Rental>, IListable<Rental>, IDeletable<Rental>
     {
     }
 }

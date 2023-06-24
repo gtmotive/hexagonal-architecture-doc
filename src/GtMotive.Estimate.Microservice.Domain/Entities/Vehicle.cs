@@ -11,7 +11,7 @@ namespace GtMotive.Estimate.Microservice.Domain.Entities
         /// <summary>
         /// Gets or sets vehicle Identify.
         /// </summary>
-        public Guid VehicleId { get; set; }
+        public int VehicleId { get; set; }
 
         /// <summary>
         /// Gets or sets vehicle brand.

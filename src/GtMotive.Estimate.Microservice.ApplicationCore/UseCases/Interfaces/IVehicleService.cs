@@ -1,5 +1,4 @@
-﻿using System;
-using GtMotive.Estimate.Microservice.Domain.Entities;
+﻿using GtMotive.Estimate.Microservice.Domain.Entities;
 using GtMotive.Estimate.Microservice.Domain.Interfaces.Cruds;
 
 namespace GtMotive.Estimate.Microservice.ApplicationCore.UseCases
@@ -8,7 +7,7 @@ namespace GtMotive.Estimate.Microservice.ApplicationCore.UseCases
     /// Service base.
     /// </summary>
     public interface IVehicleService
-        : IAddable<Vehicle>, IListable<Vehicle, Guid>
+        : IAddable<Vehicle>, IListable<Vehicle>
     {
     }
 }

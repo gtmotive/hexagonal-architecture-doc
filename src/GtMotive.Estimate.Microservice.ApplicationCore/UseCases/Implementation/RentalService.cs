@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
+using GtMotive.Estimate.Microservice.ApplicationCore.UseCases.Interfaces.Repositories;
 using GtMotive.Estimate.Microservice.Domain.Entities;
-using GtMotive.Estimate.Microservice.Domain.Interfaces.Repositories;
 
 namespace GtMotive.Estimate.Microservice.ApplicationCore.UseCases.Implementation
 {
@@ -10,13 +9,13 @@ namespace GtMotive.Estimate.Microservice.ApplicationCore.UseCases.Implementation
     /// </summary>
     public class RentalService : IRentalService
     {
-        private readonly IRepository<Rental, Guid> _repoRental;
+        private readonly IRentalRepository _repoRental;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="RentalService"/> class.
         /// </summary>
         /// <param name="repoRental">Rental Repository.</param>
-        public RentalService(IRepository<Rental, Guid> repoRental)
+        public RentalService(IRentalRepository repoRental)
         {
             _repoRental = repoRental;
         }
@@ -54,9 +53,9 @@ namespace GtMotive.Estimate.Microservice.ApplicationCore.UseCases.Implementation
         /// </summary>
         /// <param name="id">vehicle Identify.</param>
         /// <returns>Vehicle selected.</returns>
-        public Rental SelectById(Guid id)
+        public Rental SelectById(int id)
         {
-            throw new NotImplementedException();
+            return _repoRental.SelectById(id);
         }
     }
 }

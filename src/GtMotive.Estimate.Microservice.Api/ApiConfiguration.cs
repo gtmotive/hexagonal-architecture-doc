@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics.CodeAnalysis;
 using System.Reflection;
+using System.Runtime.CompilerServices;
 using GtMotive.Estimate.Microservice.Api.Authorization;
 using GtMotive.Estimate.Microservice.Api.DependencyInjection;
 using GtMotive.Estimate.Microservice.Api.Filters;
@@ -54,7 +55,10 @@ namespace GtMotive.Estimate.Microservice.Api
             services.AddMediatR(typeof(ApiConfiguration).GetTypeInfo().Assembly);
             services.AddUseCases();
             services.AddPresenters();
-            services.AddDbContext<RentingContext>();
+
+            // Registra la cadena de conexión como un servicio
+            services.AddDbContext<RentingContext>(options =>
+                options.UseSqlServer("Server=(local);Database=dbPtRenting;Integrated Security=True;"));
 
             services.AddScoped<IVehicleService, VehicleService>();
             services.AddScoped<IRentalService, RentalService>();

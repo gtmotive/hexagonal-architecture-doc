@@ -1,0 +1,3 @@
+Entrega Prueba Tecnica de Víctor Aranda Feria.
+
+La prueba que he realizado se sustenta sobre la pequeña base de datos que se puede recrear localmente con los archivo createDB.sql y createTables.sql

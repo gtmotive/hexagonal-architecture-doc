@@ -1,4 +1,5 @@
 ﻿using System;
+using GtMotive.Estimate.Microservice.ApplicationCore.Dtos;
 using GtMotive.Estimate.Microservice.ApplicationCore.UseCases;
 using GtMotive.Estimate.Microservice.Domain.Entities;
 using Microsoft.AspNetCore.Http;
@@ -49,11 +50,24 @@ namespace GtMotive.Estimate.Microservice.Host.Controllers
         }
 
         [HttpPost("Alquilar")]
-        public IActionResult RentVehicle([FromBody] Rental rental)
+        public IActionResult RentVehicle([FromBody] RentalDto rentalDto)
         {
             try
             {
-                _rentalService.Add(rental);
+                if (rentalDto == null)
+                {
+                    throw new BadHttpRequestException("No se ha recibido el cuerpo de la petición.");
+                }
+
+                // Verificar que se proporcionen vehicleId y clientId
+                if (rentalDto.VehicleId == 0 || rentalDto.ClientId == 0)
+                {
+                    throw new BadHttpRequestException("vehicleId y clientId son campos requeridos.");
+                }
+
+                // Crear el objeto Rental a partir de los datos proporcionados e invocar al servicio
+                _rentalService.Add(new Rental(rentalDto.VehicleId, rentalDto.ClientId, rentalDto.StartDate, rentalDto.EndDate));
+
                 return Ok();
             }
             catch (BadHttpRequestException ex)
@@ -63,11 +77,24 @@ namespace GtMotive.Estimate.Microservice.Host.Controllers
         }
 
         [HttpPost("Devolver")]
-        public IActionResult ReturnVehicle([FromBody] Rental rental)
+        public IActionResult ReturnVehicle([FromBody] RentalDto rentalDto)
         {
             try
             {
-                _rentalService.Delete(rental);
+                if (rentalDto == null)
+                {
+                    throw new BadHttpRequestException("No se ha recibido el cuerpo de la petición.");
+                }
+
+                // Verificar que se proporcionen vehicleId y clientId
+                if (rentalDto.VehicleId == 0 || rentalDto.ClientId == 0)
+                {
+                    throw new BadHttpRequestException("vehicleId y clientId son campos requeridos.");
+                }
+
+                // Crear el objeto Rental a partir de los datos proporcionados e invocar al servicio
+                _rentalService.Delete(new Rental(rentalDto.VehicleId, rentalDto.ClientId, rentalDto.StartDate, rentalDto.EndDate));
+
                 return Ok("Vehicle returned successfully.");
             }
             catch (BadHttpRequestException ex)

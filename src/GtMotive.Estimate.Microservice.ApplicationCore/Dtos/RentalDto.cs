@@ -8,14 +8,14 @@ namespace GtMotive.Estimate.Microservice.ApplicationCore.Dtos
     public class RentalDto
     {
         /// <summary>
-        /// Gets or Sets Client.
+        /// Gets or Sets Client Id.
         /// </summary>
-        public ClientDto Client { get; set; }
+        public int ClientId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Vehicle.
+        /// Gets or Sets Vehicle Id.
         /// </summary>
-        public VehicleDto Vehicle { get; set; }
+        public int VehicleId { get; set; }
 
         /// <summary>
         /// Gets or Sets Starting date.

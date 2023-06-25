@@ -49,10 +49,12 @@ namespace GtMotive.Estimate.Microservice.Infrastructure.Repositories
             throw new NotImplementedException();
         }
 
-        public Rental SelectByVehicleClient(int vehicleId, int clientId)
+        public Collection<Rental> SelectByClient(int clientId)
         {
-            return vehicleId > 0 && clientId > 0
-                ? context.Rentals.Where(x => x.ClientId.Equals(clientId) && x.VehicleId.Equals(vehicleId)).FirstOrDefault()
+            var resultList = context.Rentals.Where(x => x.ClientId == clientId).ToList();
+
+            return clientId > 0
+                ? new Collection<Rental>(resultList)
                 : null;
         }
     }

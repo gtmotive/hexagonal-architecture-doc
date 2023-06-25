@@ -17,8 +17,6 @@ CREATE TABLE Clients
 INSERT INTO Clients ([Name], [Email], [Phone]) VALUES ('Beatriz', 'beatriz1985@gmail.com', '655123123');
 INSERT INTO Clients ([Name], [Email], [Phone]) VALUES ('Victor', 'vaf85@gmail.com', '654456456');
 
-
-
 CREATE TABLE Vehicles
 (
 	[VehicleId] [int] PRIMARY KEY,
@@ -26,20 +24,21 @@ CREATE TABLE Vehicles
 	[ManufacturingDate] [datetime] NOT NULL,
 )
 
+INSERT INTO Vehicles ([VehicleId], [Brand], [ManufacturingDate]) VALUES (1, 'Brand1', '01/01/2023');
+INSERT INTO Vehicles ([VehicleId], [Brand], [ManufacturingDate]) VALUES (2, 'Brand2', '10/02/2022');
 
 
 CREATE TABLE [dbo].[Rentals](
 	[VehicleId] [int] NOT NULL,
 	[ClientId] [int] NOT NULL,
-	[StartDate] [datetime] NOT NULL,
-	[EndDate] [datetime] NULL,
- CONSTRAINT [PK_Rentals] PRIMARY KEY CLUSTERED 
+	[StartingDate] [datetime] NOT NULL,
+	[EndingDate] [datetime] NULL,
+ CONSTRAINT [PK_Rentals] PRIMARY KEY 
 (
 	[VehicleId] ASC,
-	[ClientId] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
-) ON [PRIMARY]
-GO
+	[ClientId] ASC,
+    [StartingDate] ASC
+))
 
 ALTER TABLE [dbo].[Rentals]  WITH CHECK ADD  CONSTRAINT [FK_Rentals_Clients] FOREIGN KEY([ClientId])
 REFERENCES [dbo].[Clients] ([ClientId])
@@ -55,4 +54,18 @@ GO
 ALTER TABLE [dbo].[Rentals] CHECK CONSTRAINT [FK_Rentals_Vehicles]
 GO
 
+
+INSERT INTO Rentals ([VehicleId], [ClientId], [StartingDate], EndingDate) VALUES (1, 1, '02/01/2023', '03/01/2023');
+INSERT INTO Rentals ([VehicleId], [ClientId], [StartingDate], EndingDate) VALUES (1, 1, '03/10/2023', '03/15/2023');
+INSERT INTO Rentals ([VehicleId], [ClientId], [StartingDate], EndingDate) VALUES (1, 1, '03/16/2023', '03/20/2023');
+
+
+INSERT INTO Rentals ([VehicleId], [ClientId], [StartingDate], EndingDate) VALUES (1, 1, '2023-02-01', '2023-03-01');
+INSERT INTO Rentals ([VehicleId], [ClientId], [StartingDate], EndingDate) VALUES (1, 1, '2023-03-01', '2023-03-15');
+INSERT INTO Rentals ([VehicleId], [ClientId], [StartingDate], EndingDate) VALUES (1, 1, '2023-03-16', '2023-03-20');
+
+
+
+select * from Vehicles
+select * from Rentals
 

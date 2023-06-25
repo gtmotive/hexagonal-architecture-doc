@@ -1,4 +1,6 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.ObjectModel;
+using System.Linq;
 using GtMotive.Estimate.Microservice.ApplicationCore.UseCases.Interfaces.Repositories;
 using GtMotive.Estimate.Microservice.Domain.Entities;
 
@@ -26,6 +28,19 @@ namespace GtMotive.Estimate.Microservice.ApplicationCore.UseCases.Implementation
         /// <param name="entity">Rental.</param>
         public void Add(Rental entity)
         {
+            if (entity == null)
+            {
+                throw new ArgumentException("Argumentos no validos");
+            }
+
+            var rentals = _repoRental.SelectByClient(entity.ClientId);
+
+            var currentRental = rentals.FirstOrDefault(x => x.VehicleId == entity.VehicleId && x.EndingDate > entity.EndingDate);
+            if (currentRental != null)
+            {
+                throw new ArgumentException("El cliente ya está alquilando un vehiculo");
+            }
+
             _repoRental.Add(entity);
         }
 

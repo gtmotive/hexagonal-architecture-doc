@@ -16,15 +16,13 @@ namespace GtMotive.Estimate.Microservice.Infrastructure.Repositories
             this.context = context;
         }
 
-        public Rental Add(Rental entity)
+        public void Add(Rental entity)
         {
             if (entity != null)
             {
                 context.Rentals.Add(entity);
                 context.SaveChanges();
             }
-
-            return entity;
         }
 
         public void Delete(Rental entity)

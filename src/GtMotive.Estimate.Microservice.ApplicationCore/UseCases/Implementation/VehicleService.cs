@@ -25,19 +25,20 @@ namespace GtMotive.Estimate.Microservice.ApplicationCore.UseCases.Implementation
         /// Create vehicle.
         /// </summary>
         /// <param name="entity">entity to create.</param>
-        /// <returns>Vehicle created.</returns>
-        public Vehicle Add(Vehicle entity)
+        public void Add(Vehicle entity)
         {
             if (entity == null)
             {
                 throw new ArgumentException("Argumentos no validos");
             }
 
-            var diff = entity.ManufacturingDate - DateTime.Now;
+            var diff = DateTime.Now - entity.ManufacturingDate;
+            if (diff.TotalDays > 5 * 365)
+            {
+                throw new ArgumentException("No se admiten vehiculos con más 5 años desde su fabricación");
+            }
 
-            return diff.TotalDays > 5 * 365
-                ? throw new ArgumentException("No se admiten vehiculos con más 5 años desde su fabricación")
-                : _repoVehicle.Add(entity);
+            _repoVehicle.Add(entity);
         }
 
         /// <summary>

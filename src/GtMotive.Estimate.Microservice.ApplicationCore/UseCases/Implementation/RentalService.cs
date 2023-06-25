@@ -24,10 +24,9 @@ namespace GtMotive.Estimate.Microservice.ApplicationCore.UseCases.Implementation
         /// Rent a vehicle.
         /// </summary>
         /// <param name="entity">Rental.</param>
-        /// <returns>Rental created.</returns>
-        public Rental Add(Rental entity)
+        public void Add(Rental entity)
         {
-            return _repoRental.Add(entity);
+            _repoRental.Add(entity);
         }
 
         /// <summary>

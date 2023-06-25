@@ -15,15 +15,13 @@ namespace GtMotive.Estimate.Microservice.Infrastructure.Repositories
             this.context = context;
         }
 
-        public Vehicle Add(Vehicle entity)
+        public void Add(Vehicle entity)
         {
             if (entity != null)
             {
                 context.Vehicles.Add(entity);
                 context.SaveChanges();
             }
-
-            return entity;
         }
 
         public void Delete(Vehicle entity)
@@ -55,7 +53,9 @@ namespace GtMotive.Estimate.Microservice.Infrastructure.Repositories
 
         public Collection<Vehicle> List()
         {
-            return new Collection<Vehicle>(context.Vehicles.ToList());
+            var result = context.Vehicles.ToList();
+
+            return new Collection<Vehicle>(result);
         }
 
         public Vehicle SelectById(int id)

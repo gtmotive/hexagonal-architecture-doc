@@ -1,4 +1,5 @@
-﻿using GtMotive.Estimate.Microservice.ApplicationCore.UseCases;
+﻿using System;
+using GtMotive.Estimate.Microservice.ApplicationCore.UseCases;
 using GtMotive.Estimate.Microservice.Domain.Entities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -27,7 +28,7 @@ namespace GtMotive.Estimate.Microservice.Host.Controllers
                 _vehicleService.Add(vehicle);
                 return Ok();
             }
-            catch (BadHttpRequestException ex)
+            catch (ArgumentException ex)
             {
                 return BadRequest(ex.Message);
             }
@@ -52,8 +53,8 @@ namespace GtMotive.Estimate.Microservice.Host.Controllers
         {
             try
             {
-                var rentedVehicle = _rentalService.Add(rental);
-                return Ok(rentedVehicle);
+                _rentalService.Add(rental);
+                return Ok();
             }
             catch (BadHttpRequestException ex)
             {

@@ -70,6 +70,10 @@ namespace GtMotive.Estimate.Microservice.Host.Controllers
 
                 return Ok();
             }
+            catch (ArgumentException ex)
+            {
+                return BadRequest(ex.Message);
+            }
             catch (BadHttpRequestException ex)
             {
                 return BadRequest(ex.Message);

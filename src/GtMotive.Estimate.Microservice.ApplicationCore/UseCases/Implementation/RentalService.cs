@@ -35,10 +35,10 @@ namespace GtMotive.Estimate.Microservice.ApplicationCore.UseCases.Implementation
 
             var rentals = _repoRental.SelectByClient(entity.ClientId);
 
-            var currentRental = rentals.FirstOrDefault(x => x.VehicleId == entity.VehicleId && x.EndingDate > entity.EndingDate);
+            var currentRental = rentals.FirstOrDefault(x => x.VehicleId == entity.VehicleId && x.EndingDate > entity.StartingDate);
             if (currentRental != null)
             {
-                throw new ArgumentException("El cliente ya está alquilando un vehiculo");
+                throw new ArgumentException($"El cliente tiene un alquiler que solapa con el periodo {entity.StartingDate} - {entity.EndingDate}");
             }
 
             _repoRental.Add(entity);

@@ -11,7 +11,7 @@ namespace GtMotive.Estimate.Microservice.Infrastructure.SqlServer.Settings
             if (builder != null)
             {
                 builder.ToTable("Rentals");
-                builder.HasKey(k => new { k.VehicleId, k.ClientId });
+                builder.HasKey(k => new { k.VehicleId, k.ClientId, k.StartingDate });
             }
         }
     }

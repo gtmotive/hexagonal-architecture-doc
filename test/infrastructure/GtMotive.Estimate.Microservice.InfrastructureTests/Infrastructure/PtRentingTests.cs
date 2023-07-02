@@ -2,7 +2,12 @@
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
+using GtMotive.Estimate.Microservice.ApplicationCore.Dtos;
+using GtMotive.Estimate.Microservice.ApplicationCore.UseCases;
 using GtMotive.Estimate.Microservice.Domain.Entities;
+using GtMotive.Estimate.Microservice.Host.Controllers;
+using Microsoft.AspNetCore.Mvc;
+using Moq;
 using Newtonsoft.Json;
 using Xunit;
 
@@ -24,6 +29,19 @@ namespace GtMotive.Estimate.Microservice.InfrastructureTests.Infrastructure
 
             // Asegurar que se haya devuelto una lista de vehículos no vacía
             Assert.NotEmpty(vehiculos);
+        }
+
+        [Fact]
+        public void CreateVehicleTest()
+        {
+            var rentServiceMock = new Mock<IRentalService>();
+            var vehicleServiceMock = new Mock<IVehicleService>();
+
+            var controller = new RentingController(rentServiceMock.Object, vehicleServiceMock.Object);
+
+            var response = controller.CreateVehicle(new VehicleDto(5, "Ford Focus", new DateTime(2012, 10, 15)));
+
+            Assert.IsType<BadRequestObjectResult>(response);
         }
     }
 }

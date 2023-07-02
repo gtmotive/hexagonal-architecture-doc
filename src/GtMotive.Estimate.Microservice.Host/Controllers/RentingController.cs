@@ -22,11 +22,16 @@ namespace GtMotive.Estimate.Microservice.Host.Controllers
         }
 
         [HttpPost("CrearVehiculo")]
-        public IActionResult CreateVehicle([FromBody] Vehicle vehicle)
+        public IActionResult CreateVehicle([FromBody] VehicleDto vehicleDto)
         {
             try
             {
-                _vehicleService.Add(vehicle);
+                if (vehicleDto == null)
+                {
+                    throw new ArgumentException("No se recibieron datos de un vehiculo");
+                }
+
+                _vehicleService.Add(new Vehicle(vehicleDto.VehicleId, vehicleDto.Brand, vehicleDto.ManufacturingDate));
                 return Ok();
             }
             catch (ArgumentException ex)

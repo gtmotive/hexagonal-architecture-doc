@@ -9,7 +9,7 @@ namespace GtMotive.Estimate.Microservice.UnitTests
         [Fact]
         public void NotBeOld()
         {
-            Assert.Throws<ArgumentException>(() => new Vehicle("Marca nueva", new DateTime(2010, 10, 1)));
+            Assert.Throws<ArgumentException>(() => new Vehicle(10, "Marca nueva", new DateTime(2010, 10, 1)));
         }
     }
 }

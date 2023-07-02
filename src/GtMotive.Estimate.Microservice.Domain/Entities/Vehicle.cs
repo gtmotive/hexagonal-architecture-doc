@@ -16,10 +16,12 @@ namespace GtMotive.Estimate.Microservice.Domain.Entities
         /// <summary>
         /// Initializes a new instance of the <see cref="Vehicle"/> class.
         /// </summary>
+        /// <param name="vehicleId">Vehicle Id.</param>
         /// <param name="brand">Vehicle brand.</param>
         /// <param name="manufacturingDate">Vehicle manufacturing date.</param>
-        public Vehicle(string brand, DateTime manufacturingDate)
+        public Vehicle(int vehicleId, string brand, DateTime manufacturingDate)
         {
+            VehicleId = vehicleId;
             Brand = brand;
             this.manufacturingDate = new VehicleManufacturingDate(manufacturingDate);
         }

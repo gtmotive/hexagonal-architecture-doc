@@ -32,12 +32,6 @@ namespace GtMotive.Estimate.Microservice.ApplicationCore.UseCases.Implementation
                 throw new ArgumentException("Argumentos no validos");
             }
 
-            var diff = DateTime.Now - entity.ManufacturingDate;
-            if (diff.TotalDays > 5 * 365)
-            {
-                throw new ArgumentException("No se admiten vehiculos con más 5 años desde su fabricación");
-            }
-
             _repoVehicle.Add(entity);
         }
 

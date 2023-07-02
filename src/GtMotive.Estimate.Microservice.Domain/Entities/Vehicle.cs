@@ -9,6 +9,11 @@ namespace GtMotive.Estimate.Microservice.Domain.Entities
     public class Vehicle
     {
         /// <summary>
+        /// Manufacturing date value object.
+        /// </summary>
+        private readonly VehicleManufacturingDate manufacturingDate;
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="Vehicle"/> class.
         /// </summary>
         /// <param name="brand">Vehicle brand.</param>
@@ -16,7 +21,7 @@ namespace GtMotive.Estimate.Microservice.Domain.Entities
         public Vehicle(string brand, DateTime manufacturingDate)
         {
             Brand = brand;
-            ManufacturingDate = manufacturingDate;
+            this.manufacturingDate = new VehicleManufacturingDate(manufacturingDate);
         }
 
         /// <summary>
@@ -32,7 +37,11 @@ namespace GtMotive.Estimate.Microservice.Domain.Entities
         /// <summary>
         /// Gets or sets vehicle manufactoring date.
         /// </summary>
-        public DateTime ManufacturingDate { get; set; }
+        public DateTime ManufacturingDate
+        {
+            get => manufacturingDate.Value;
+            set => manufacturingDate.Value = value;
+        }
 
         /// <summary>
         /// Gets vehicles rentals.

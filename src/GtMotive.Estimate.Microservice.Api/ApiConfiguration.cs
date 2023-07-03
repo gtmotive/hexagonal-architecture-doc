@@ -1,12 +1,21 @@
 ﻿using System;
 using System.Diagnostics.CodeAnalysis;
 using System.Reflection;
+using System.Runtime.CompilerServices;
 using GtMotive.Estimate.Microservice.Api.Authorization;
 using GtMotive.Estimate.Microservice.Api.DependencyInjection;
 using GtMotive.Estimate.Microservice.Api.Filters;
 using GtMotive.Estimate.Microservice.ApplicationCore;
+using GtMotive.Estimate.Microservice.ApplicationCore.UseCases;
+using GtMotive.Estimate.Microservice.ApplicationCore.UseCases.Implementation;
+using GtMotive.Estimate.Microservice.ApplicationCore.UseCases.Interfaces.Repositories;
+using GtMotive.Estimate.Microservice.Domain.Interfaces.Repositories;
+using GtMotive.Estimate.Microservice.Infrastructure.Repositories;
+using GtMotive.Estimate.Microservice.Infrastructure.SqlServer.Context;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 [assembly: CLSCompliant(false)]
@@ -46,6 +55,16 @@ namespace GtMotive.Estimate.Microservice.Api
             services.AddMediatR(typeof(ApiConfiguration).GetTypeInfo().Assembly);
             services.AddUseCases();
             services.AddPresenters();
+
+            // Registra la cadena de conexión como un servicio
+            services.AddDbContext<RentingContext>(options =>
+                options.UseSqlServer("Server=(local);Database=dbPtRenting;Integrated Security=True;"));
+
+            services.AddScoped<IVehicleService, VehicleService>();
+            services.AddScoped<IRentalService, RentalService>();
+
+            services.AddScoped<IVehicleRepository, VehicleRepository>();
+            services.AddScoped<IRentalRepository, RentalRepository>();
         }
     }
 }

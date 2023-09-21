@@ -79,9 +79,9 @@ builder.Services.Configure<ForwardedHeadersOptions>(options =>
 JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
 
 builder.Services.AddAuthentication(options =>
-    {
-        options.DefaultScheme = IdentityServerAuthenticationDefaults.AuthenticationScheme;
-    })
+{
+    options.DefaultScheme = IdentityServerAuthenticationDefaults.AuthenticationScheme;
+})
     .AddIdentityServerAuthentication(options =>
     {
         options.Authority = appSettings.JwtAuthority;

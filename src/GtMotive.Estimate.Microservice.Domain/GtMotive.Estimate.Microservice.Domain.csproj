@@ -12,4 +12,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Update="Microsoft.Extensions.Options" Version="6.0.0" />
+  </ItemGroup>
+
 </Project>

@@ -7,6 +7,8 @@ using GtMotive.Estimate.Microservice.Api;
 using GtMotive.Estimate.Microservice.Host.Configuration;
 using GtMotive.Estimate.Microservice.Host.DependencyInjection;
 using GtMotive.Estimate.Microservice.Infrastructure;
+using GtMotive.Estimate.Microservice.Infrastructure.FileSystem;
+using GtMotive.Estimate.Microservice.Infrastructure.FileSystem.Settings;
 using GtMotive.Estimate.Microservice.Infrastructure.MongoDb.Settings;
 using IdentityServer4.AccessTokenValidation;
 using Microsoft.ApplicationInsights.Extensibility;
@@ -57,6 +59,11 @@ builder.Services.AddSwaggerGen();
 var appSettingsSection = builder.Configuration.GetSection("AppSettings");
 builder.Services.Configure<AppSettings>(appSettingsSection);
 var appSettings = appSettingsSection.Get<AppSettings>();
+
+var fileSystemSettingsSection = builder.Configuration.GetSection("FileSystemSettings");
+builder.Services.Configure<FileSystemSettings>(fileSystemSettingsSection);
+builder.Services.AddScoped<FileSystemServices>();
+
 builder.Services.Configure<MongoDbSettings>(builder.Configuration.GetSection("MongoDb"));
 
 builder.Services.AddControllers(ApiConfiguration.ConfigureControllers)
@@ -85,7 +92,7 @@ builder.Services.AddAuthentication(options =>
     .AddIdentityServerAuthentication(options =>
     {
         options.Authority = appSettings.JwtAuthority;
-        options.ApiName = "estimate-api";
+        options.ApiName = appSettings.ApiName;
         options.SupportedTokens = SupportedTokens.Jwt;
     });
 
@@ -100,6 +107,7 @@ Log.Logger = builder.Environment.IsDevelopment() ?
         .MinimumLevel.Override("Microsoft.AspNetCore", LogEventLevel.Information)
         .MinimumLevel.Override("Microsoft.Hosting.Lifetime", LogEventLevel.Information)
         .MinimumLevel.Override("System", LogEventLevel.Warning)
+        .WriteTo.File("logs/log.txt")
         .WriteTo.Console(
             outputTemplate:
             "[{Timestamp:HH:mm:ss} {Level}] {SourceContext}{NewLine}{Message:lj}{NewLine}{Exception}{NewLine}",
@@ -133,5 +141,5 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
-
 app.Run();
+

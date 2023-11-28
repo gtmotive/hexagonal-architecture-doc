@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using GtMotive.Estimate.Microservice.Api.Models;
-using GtMotive.Estimate.Microservice.Host.Models;
+using GtMotive.Estimate.Microservice.Host.Models.Vehicle;
 
 namespace GtMotive.Estimate.Microservice.Host.Mappers
 {

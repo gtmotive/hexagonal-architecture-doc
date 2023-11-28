@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GtMotive.Estimate.Microservice.Host.Models
+namespace GtMotive.Estimate.Microservice.Host.Models.Vehicle
 {
     public abstract class VehicleDto
     {

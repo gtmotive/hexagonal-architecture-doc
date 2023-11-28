@@ -2,6 +2,7 @@
 using GtMotive.Estimate.Microservice.Api.Repository;
 using GtMotive.Estimate.Microservice.Infrastructure.FileSystem;
 using GtMotive.Estimate.Microservice.Infrastructure.FileSystem.Settings;
+using GtMotive.Estimate.Microservice.Infrastructure.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace GtMotive.Estimate.Microservice.Api.DependencyInjection
@@ -11,10 +12,12 @@ namespace GtMotive.Estimate.Microservice.Api.DependencyInjection
         public static IServiceCollection AddElements(this IServiceCollection services)
         {
             services.AddScoped<FileSystemSettings>();
-            services.AddScoped<FileSystemServices>();
+            services.AddScoped<IFileSystemServices, FileSystemServices>();
+            services.AddScoped<IVehicleSystemServices, VehicleSystemServices>();
+            services.AddScoped<IRentSystemServices, RentSystemServices>();
 
-            services.AddScoped<IVehicleRepository, VehicleRepository>();
-            services.AddScoped<IRentRepository, RentRepository>();
+            services.AddScoped<IVehicleBusiness, VehicleBusiness>();
+            services.AddScoped<IRentBusiness, RentBusiness>();
 
             return services;
         }

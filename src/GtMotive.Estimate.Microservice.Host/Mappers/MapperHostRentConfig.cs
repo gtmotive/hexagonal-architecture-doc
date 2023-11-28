@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using GtMotive.Estimate.Microservice.Api.Models;
-using GtMotive.Estimate.Microservice.Host.Models;
+using GtMotive.Estimate.Microservice.Host.Models.Rent;
 
 namespace GtMotive.Estimate.Microservice.Host.Mappers
 {
@@ -12,16 +12,14 @@ namespace GtMotive.Estimate.Microservice.Host.Mappers
             {
                 cfg.CreateMap<RequestRentDto, RentApi>()
                    .ForMember(dest => dest.VehicleId, opt => opt.MapFrom(src => src.VehicleId))
-                   .ForMember(dest => dest.FinalDate, opt => opt.MapFrom(src => src.FinalDate))
-                   .ForMember(dest => dest.InitialDate, opt => opt.MapFrom(src => src.InitialDate))
-                   .ForMember(dest => dest.OperationDate, opt => opt.MapFrom(src => src.OperationDate));
+                   .ForMember(dest => dest.UserId, opt => opt.MapFrom(src => src.UserId));
 
                 cfg.CreateMap<RentApi, ResponseRentDto>()
                    .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Id))
                    .ForMember(dest => dest.VehicleId, opt => opt.MapFrom(src => src.VehicleId))
-                   .ForMember(dest => dest.FinalDate, opt => opt.MapFrom(src => src.FinalDate))
+                   .ForMember(dest => dest.UserId, opt => opt.MapFrom(src => src.UserId))
                    .ForMember(dest => dest.InitialDate, opt => opt.MapFrom(src => src.InitialDate))
-                   .ForMember(dest => dest.OperationDate, opt => opt.MapFrom(src => src.OperationDate));
+                   .ForMember(dest => dest.DevolutionDate, opt => opt.MapFrom(src => src.DevolutionDate));
             });
 
             var mapper = new Mapper(config);

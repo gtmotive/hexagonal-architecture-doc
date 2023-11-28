@@ -7,7 +7,7 @@ using GtMotive.Estimate.Microservice.Api.Interfaces;
 using GtMotive.Estimate.Microservice.Api.Repository;
 using GtMotive.Estimate.Microservice.Domain.Entities;
 using GtMotive.Estimate.Microservice.Host.Controller.V1;
-using GtMotive.Estimate.Microservice.Host.Models;
+using GtMotive.Estimate.Microservice.Host.Models.Vehicle;
 using GtMotive.Estimate.Microservice.Infrastructure.FileSystem;
 using GtMotive.Estimate.Microservice.Infrastructure.FileSystem.Settings;
 using Microsoft.AspNetCore.Mvc;
@@ -20,7 +20,7 @@ namespace GtMotive.Estimate.Microservice.FunctionalTests.Specs
 {
     public class VehicleControllerTest
     {
-        private readonly IVehicleRepository vehicleRepository;
+        private readonly IVehicleBusiness vehicleRepository;
 
         public VehicleControllerTest()
         {
@@ -37,7 +37,7 @@ namespace GtMotive.Estimate.Microservice.FunctionalTests.Specs
             // Obtener configuraciones
             var fileSystemServices = serviceProvider.GetRequiredService<IOptions<FileSystemSettings>>();
 
-            vehicleRepository = new VehicleRepository(new FileSystemServices(fileSystemServices));
+            vehicleRepository = new VehicleBusiness(new VehicleSystemServices(fileSystemServices));
         }
 
         [Fact]

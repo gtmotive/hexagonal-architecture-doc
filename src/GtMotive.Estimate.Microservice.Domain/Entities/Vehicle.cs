@@ -14,10 +14,5 @@ namespace GtMotive.Estimate.Microservice.Domain.Entities
         public DateTime ManufactureDate { get; set; }
 
         public DateTime PurchaseDate { get; set; }
-
-        public void SetId()
-        {
-            Id = Guid.NewGuid().ToString();
-        }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using GtMotive.Estimate.Microservice.Api.Action;
 using GtMotive.Estimate.Microservice.Api.Interfaces;
 using GtMotive.Estimate.Microservice.Api.Models;
 using Moq;
@@ -14,24 +15,45 @@ namespace GtMotive.Estimate.Microservice.UnitTests.Api
         public void GetAllReturnsOkResultWithListOfRents()
         {
             // Arrange
-            var mockRepository = new Mock<IVehicleRepository>();
+            var mockRepository = new Mock<IRentBusiness>();
             mockRepository.Setup(repo => repo.GetAll()).Returns(GetAllMock());
 
             // Act
             var expected = 2;
-            var actual = mockRepository.Object.GetAll().Count();
+            var actual = mockRepository.Object.GetAll().Data.Count();
 
             // Assert
             Assert.Equal(expected, actual);
         }
 
-        private static Func<IEnumerable<RentApi>> GetAllMock()
+        [Fact]
+        public void DevolutionReturnsOk()
         {
-            return () => new List<RentApi>
+            // Arrange
+            var mockRepository = new Mock<IRentBusiness>();
+            mockRepository.Setup(repo => repo.GetAll()).Returns(GetAllMock());
+
+            // Act
+            var expected = true;
+            var actual = mockRepository.Object.Devolution("2").IsSuccess;
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        private static Result<IEnumerable<RentApi>> GetAllMock()
+        {
+            var resultRentApi = new Result<IEnumerable<RentApi>>();
+
+            var listRentApi = new List<RentApi>()
             {
-                new RentApi { Id = Guid.NewGuid().ToString(),  VehicleId = "b1ecc77e-e2f0-40e0-9165-240140857ded", InitialDate = DateTime.Now.AddDays(1), FinalDate = DateTime.Now.AddDays(3), OperationDate = DateTime.Now },
-                new RentApi { Id = Guid.NewGuid().ToString(),  VehicleId = "f705155d-d500-416b-81da-96708b965d05", InitialDate = DateTime.Now.AddDays(5), FinalDate = DateTime.Now.AddDays(8), OperationDate = DateTime.Now },
+                new RentApi { Id = "1", VehicleId = "1",  UserId = "Juan", InitialDate = new DateTime(2023, 1, 1) },
+                new RentApi { Id = "2", VehicleId = "2",  UserId = "Ana", InitialDate = new DateTime(2023, 1, 2), DevolutionDate = new DateTime(2023, 2, 1) },
+                new RentApi { Id = "3", VehicleId = "2",  UserId = "Cristian", InitialDate = new DateTime(2023, 1, 1) }
             };
+
+            resultRentApi.Ok(listRentApi);
+            return resultRentApi;
         }
     }
 }

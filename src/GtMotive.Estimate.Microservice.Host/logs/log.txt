@@ -2083,3 +2083,806 @@ System.NullReferenceException: Object reference not set to an instance of an obj
 2023-11-27 05:38:58.974 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController.GetAvailables (GtMotive.Estimate.Microservice.Host) in 4798.5226ms
 2023-11-27 05:38:58.978 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController.GetAvailables (GtMotive.Estimate.Microservice.Host)'
 2023-11-27 05:38:58.979 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/api/v1/Vehicle/GetAvailables - - - 200 - application/json;+charset=utf-8 4835.1683ms
+2023-11-27 14:00:08.567 +01:00 [INF] User profile is available. Using 'C:\Users\ChristianMonzonCerve\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-27 14:00:09.094 +01:00 [INF] Now listening on: https://localhost:52322
+2023-11-27 14:00:09.094 +01:00 [INF] Now listening on: http://localhost:52323
+2023-11-27 14:00:16.992 +01:00 [INF] Request starting HTTP/2 GET https://localhost:52322/ - -
+2023-11-27 14:00:17.379 +01:00 [INF] Request finished HTTP/2 GET https://localhost:52322/ - - - 404 0 - 389.2623ms
+2023-11-27 14:00:28.332 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/swagger/index.html - -
+2023-11-27 14:00:28.522 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/swagger/index.html - - - 200 - text/html;charset=utf-8 189.1480ms
+2023-11-27 14:00:28.528 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/swagger/swagger-ui-bundle.js - -
+2023-11-27 14:00:28.528 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/swagger/swagger-ui-standalone-preset.js - -
+2023-11-27 14:00:28.529 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/_framework/aspnetcore-browser-refresh.js - -
+2023-11-27 14:00:28.531 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/swagger/swagger-ui.css - -
+2023-11-27 14:00:28.533 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/_framework/aspnetcore-browser-refresh.js - - - 200 12402 application/javascript;+charset=utf-8 4.3276ms
+2023-11-27 14:00:28.542 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/_vs/browserLink - -
+2023-11-27 14:00:28.577 +01:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-11-27 14:00:28.577 +01:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-11-27 14:00:28.578 +01:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-11-27 14:00:28.583 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/swagger/swagger-ui.css - - - 200 143943 text/css 51.3925ms
+2023-11-27 14:00:28.583 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/swagger/swagger-ui-bundle.js - - - 200 1096145 application/javascript 55.5949ms
+2023-11-27 14:00:28.583 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/swagger/swagger-ui-standalone-preset.js - - - 200 339486 application/javascript 54.8480ms
+2023-11-27 14:00:28.632 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 90.5049ms
+2023-11-27 14:00:28.724 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/swagger/v1.0.1.0/swagger.json - -
+2023-11-27 14:00:28.800 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "POST api/v1/Rent/Create" for actions - GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host),GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Devolution (GtMotive.Estimate.Microservice.Host). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-11-27 14:00:28.950 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/swagger/v1.0.1.0/swagger.json - - - 500 - text/plain;+charset=utf-8 226.4339ms
+2023-11-27 14:00:46.532 +01:00 [INF] User profile is available. Using 'C:\Users\ChristianMonzonCerve\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-27 14:00:46.735 +01:00 [INF] Now listening on: https://localhost:52322
+2023-11-27 14:00:46.735 +01:00 [INF] Now listening on: http://localhost:52323
+2023-11-27 14:00:50.726 +01:00 [INF] Request starting HTTP/2 GET https://localhost:52322/ - -
+2023-11-27 14:00:50.876 +01:00 [INF] Request finished HTTP/2 GET https://localhost:52322/ - - - 404 0 - 151.0302ms
+2023-11-27 14:00:54.112 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/swagger/index.html - -
+2023-11-27 14:00:54.203 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/swagger/index.html - - - 200 - text/html;charset=utf-8 90.5248ms
+2023-11-27 14:00:54.206 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/_vs/browserLink - -
+2023-11-27 14:00:54.209 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/_framework/aspnetcore-browser-refresh.js - -
+2023-11-27 14:00:54.213 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/_framework/aspnetcore-browser-refresh.js - - - 200 12402 application/javascript;+charset=utf-8 3.9210ms
+2023-11-27 14:00:54.271 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 64.7260ms
+2023-11-27 14:00:54.294 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/swagger/v1.0.1.0/swagger.json - -
+2023-11-27 14:00:54.418 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/swagger/v1.0.1.0/swagger.json - - - 200 - application/json;charset=utf-8 123.8646ms
+2023-11-27 14:06:54.343 +01:00 [INF] User profile is available. Using 'C:\Users\ChristianMonzonCerve\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-27 14:06:54.525 +01:00 [INF] Now listening on: https://localhost:52322
+2023-11-27 14:06:54.526 +01:00 [INF] Now listening on: http://localhost:52323
+2023-11-27 14:06:59.031 +01:00 [INF] Request starting HTTP/2 GET https://localhost:52322/ - -
+2023-11-27 14:06:59.183 +01:00 [INF] Request finished HTTP/2 GET https://localhost:52322/ - - - 404 0 - 152.9277ms
+2023-11-27 14:07:04.467 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/swagger/index.html - -
+2023-11-27 14:07:04.555 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/swagger/index.html - - - 200 - text/html;charset=utf-8 87.8549ms
+2023-11-27 14:07:04.559 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/_vs/browserLink - -
+2023-11-27 14:07:04.560 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/_framework/aspnetcore-browser-refresh.js - -
+2023-11-27 14:07:04.564 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/_framework/aspnetcore-browser-refresh.js - - - 200 12402 application/javascript;+charset=utf-8 3.2620ms
+2023-11-27 14:07:04.619 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 60.8259ms
+2023-11-27 14:07:04.713 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/swagger/v1.0.1.0/swagger.json - -
+2023-11-27 14:07:04.717 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/swagger/favicon-32x32.png - -
+2023-11-27 14:07:04.728 +01:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2023-11-27 14:07:04.728 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/swagger/favicon-32x32.png - - - 200 628 image/png 11.2475ms
+2023-11-27 14:07:04.840 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/swagger/v1.0.1.0/swagger.json - - - 200 - application/json;charset=utf-8 126.9696ms
+2023-11-27 14:09:32.575 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 115
+2023-11-27 14:09:32.601 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 14:09:32.621 +01:00 [INF] Route matched with {action = "Create", controller = "Rent"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(GtMotive.Estimate.Microservice.Host.Models.RequestRentDto) on controller GtMotive.Estimate.Microservice.Host.Controller.V1.RentController (GtMotive.Estimate.Microservice.Host).
+2023-11-27 14:09:58.891 +01:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2023-11-27 14:09:58.900 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host) in 26272.8288ms
+2023-11-27 14:09:58.900 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 14:09:58.901 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 115 - 200 0 - 26326.2969ms
+2023-11-27 14:10:06.592 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/api/v1/Rent/GetAll - -
+2023-11-27 14:10:06.596 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.GetAll (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 14:10:06.597 +01:00 [INF] Route matched with {action = "GetAll", controller = "Rent"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[GtMotive.Estimate.Microservice.Api.Models.RentApi]] GetAll() on controller GtMotive.Estimate.Microservice.Host.Controller.V1.RentController (GtMotive.Estimate.Microservice.Host).
+2023-11-27 14:10:09.616 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GtMotive.Estimate.Microservice.Host.Models.ResponseRentDto, GtMotive.Estimate.Microservice.Host, Version=1.0.1.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-11-27 14:10:09.619 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.GetAll (GtMotive.Estimate.Microservice.Host) in 3021.2095ms
+2023-11-27 14:10:09.620 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.GetAll (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 14:10:09.620 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/api/v1/Rent/GetAll - - - 200 - application/json;+charset=utf-8 3027.5446ms
+2023-11-27 14:13:05.077 +01:00 [INF] User profile is available. Using 'C:\Users\ChristianMonzonCerve\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-27 14:13:05.401 +01:00 [INF] Now listening on: https://localhost:52322
+2023-11-27 14:13:05.402 +01:00 [INF] Now listening on: http://localhost:52323
+2023-11-27 14:13:06.757 +01:00 [INF] Request starting HTTP/2 GET https://localhost:52322/ - -
+2023-11-27 14:13:06.906 +01:00 [INF] Request finished HTTP/2 GET https://localhost:52322/ - - - 404 0 - 150.9949ms
+2023-11-27 14:13:14.549 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 115
+2023-11-27 14:13:14.558 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 14:13:14.578 +01:00 [INF] Route matched with {action = "Create", controller = "Rent"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(GtMotive.Estimate.Microservice.Host.Models.RequestRentDto) on controller GtMotive.Estimate.Microservice.Host.Controller.V1.RentController (GtMotive.Estimate.Microservice.Host).
+2023-11-27 14:13:22.817 +01:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2023-11-27 14:13:22.825 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host) in 8241.7602ms
+2023-11-27 14:13:22.826 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 14:13:22.827 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 115 - 200 0 - 8278.0192ms
+2023-11-27 14:13:27.456 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/api/v1/Rent/GetAll - -
+2023-11-27 14:13:27.459 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.GetAll (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 14:13:27.461 +01:00 [INF] Route matched with {action = "GetAll", controller = "Rent"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[GtMotive.Estimate.Microservice.Api.Models.RentApi]] GetAll() on controller GtMotive.Estimate.Microservice.Host.Controller.V1.RentController (GtMotive.Estimate.Microservice.Host).
+2023-11-27 14:13:27.490 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GtMotive.Estimate.Microservice.Host.Models.ResponseRentDto, GtMotive.Estimate.Microservice.Host, Version=1.0.1.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-11-27 14:13:27.497 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.GetAll (GtMotive.Estimate.Microservice.Host) in 34.9037ms
+2023-11-27 14:13:27.497 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.GetAll (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 14:13:27.498 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/api/v1/Rent/GetAll - - - 200 - application/json;+charset=utf-8 42.2522ms
+2023-11-27 14:13:48.046 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 115
+2023-11-27 14:13:48.048 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 14:13:48.049 +01:00 [INF] Route matched with {action = "Create", controller = "Rent"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(GtMotive.Estimate.Microservice.Host.Models.RequestRentDto) on controller GtMotive.Estimate.Microservice.Host.Controller.V1.RentController (GtMotive.Estimate.Microservice.Host).
+2023-11-27 14:13:48.056 +01:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2023-11-27 14:13:48.057 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host) in 7.1177ms
+2023-11-27 14:13:48.057 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 14:13:48.058 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 115 - 200 0 - 13.5385ms
+2023-11-27 14:13:50.075 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/api/v1/Rent/GetAll - -
+2023-11-27 14:13:50.081 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.GetAll (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 14:13:50.082 +01:00 [INF] Route matched with {action = "GetAll", controller = "Rent"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[GtMotive.Estimate.Microservice.Api.Models.RentApi]] GetAll() on controller GtMotive.Estimate.Microservice.Host.Controller.V1.RentController (GtMotive.Estimate.Microservice.Host).
+2023-11-27 14:13:50.088 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GtMotive.Estimate.Microservice.Host.Models.ResponseRentDto, GtMotive.Estimate.Microservice.Host, Version=1.0.1.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-11-27 14:13:50.089 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.GetAll (GtMotive.Estimate.Microservice.Host) in 5.9463ms
+2023-11-27 14:13:50.089 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.GetAll (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 14:13:50.090 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/api/v1/Rent/GetAll - - - 200 - application/json;+charset=utf-8 14.2503ms
+2023-11-27 14:31:22.721 +01:00 [INF] User profile is available. Using 'C:\Users\ChristianMonzonCerve\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-27 14:31:22.914 +01:00 [INF] Now listening on: https://localhost:52322
+2023-11-27 14:31:22.914 +01:00 [INF] Now listening on: http://localhost:52323
+2023-11-27 14:31:24.892 +01:00 [INF] Request starting HTTP/2 GET https://localhost:52322/ - -
+2023-11-27 14:31:25.042 +01:00 [INF] Request finished HTTP/2 GET https://localhost:52322/ - - - 404 0 - 152.1340ms
+2023-11-27 14:35:32.944 +01:00 [INF] User profile is available. Using 'C:\Users\ChristianMonzonCerve\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-27 14:35:33.129 +01:00 [INF] Now listening on: https://localhost:52322
+2023-11-27 14:35:33.129 +01:00 [INF] Now listening on: http://localhost:52323
+2023-11-27 14:35:34.312 +01:00 [INF] Request starting HTTP/2 GET https://localhost:52322/ - -
+2023-11-27 14:35:34.458 +01:00 [INF] Request finished HTTP/2 GET https://localhost:52322/ - - - 404 0 - 149.5945ms
+2023-11-27 14:36:55.849 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/api/v1/Rent/GetAll - -
+2023-11-27 14:36:55.883 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.GetAll (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 14:36:55.893 +01:00 [INF] Route matched with {action = "GetAll", controller = "Rent"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[GtMotive.Estimate.Microservice.Api.Models.RentApi]] GetAll() on controller GtMotive.Estimate.Microservice.Host.Controller.V1.RentController (GtMotive.Estimate.Microservice.Host).
+2023-11-27 14:36:56.082 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GtMotive.Estimate.Microservice.Host.Models.Rent.ResponseRentDto, GtMotive.Estimate.Microservice.Host, Version=1.0.1.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-11-27 14:36:56.105 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.GetAll (GtMotive.Estimate.Microservice.Host) in 206.0825ms
+2023-11-27 14:36:56.109 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.GetAll (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 14:36:56.110 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/api/v1/Rent/GetAll - - - 200 - application/json;+charset=utf-8 260.9521ms
+2023-11-27 14:40:53.406 +01:00 [INF] User profile is available. Using 'C:\Users\ChristianMonzonCerve\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-27 14:40:53.586 +01:00 [INF] Now listening on: https://localhost:52322
+2023-11-27 14:40:53.586 +01:00 [INF] Now listening on: http://localhost:52323
+2023-11-27 14:40:57.612 +01:00 [INF] Request starting HTTP/2 GET https://localhost:52322/ - -
+2023-11-27 14:40:57.755 +01:00 [INF] Request finished HTTP/2 GET https://localhost:52322/ - - - 404 0 - 144.7334ms
+2023-11-27 14:41:06.033 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/swagger/index.html - -
+2023-11-27 14:41:06.121 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/swagger/index.html - - - 200 - text/html;charset=utf-8 88.4283ms
+2023-11-27 14:41:06.125 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/_vs/browserLink - -
+2023-11-27 14:41:06.127 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/_framework/aspnetcore-browser-refresh.js - -
+2023-11-27 14:41:06.131 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/_framework/aspnetcore-browser-refresh.js - - - 200 12402 application/javascript;+charset=utf-8 3.4186ms
+2023-11-27 14:41:06.188 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 63.3469ms
+2023-11-27 14:41:06.272 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/swagger/v1.0.1.0/swagger.json - -
+2023-11-27 14:41:06.406 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/swagger/v1.0.1.0/swagger.json - - - 200 - application/json;charset=utf-8 134.3365ms
+2023-11-27 14:41:13.815 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/api/v1/Vehicle/GetAvailables - -
+2023-11-27 14:41:13.844 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController.GetAvailables (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 14:41:13.853 +01:00 [INF] Route matched with {action = "GetAvailables", controller = "Vehicle"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[GtMotive.Estimate.Microservice.Host.Models.Vehicle.RequestVehicleDto]] GetAvailables() on controller GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController (GtMotive.Estimate.Microservice.Host).
+2023-11-27 14:41:21.111 +01:00 [ERR] Exception captured in BusinessExceptionFilter.
+System.NotImplementedException: The method or operation is not implemented.
+   at GtMotive.Estimate.Microservice.Infrastructure.FileSystem.FileSystemServices.GetCollectionVehicles() in C:\2023.11.20.SQL\PruebaTecnica\src\GtMotive.Estimate.Microservice.Infrastructure\FileSystem\FileSystemServices.cs:line 99
+   at GtMotive.Estimate.Microservice.Api.Repository.VehicleRepository.GetAll() in C:\2023.11.20.SQL\PruebaTecnica\src\GtMotive.Estimate.Microservice.Api\Repository\VehicleRepository.cs:line 33
+   at GtMotive.Estimate.Microservice.Api.Repository.VehicleRepository.GetAvailables() in C:\2023.11.20.SQL\PruebaTecnica\src\GtMotive.Estimate.Microservice.Api\Repository\VehicleRepository.cs:line 44
+   at GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController.GetAvailables() in C:\2023.11.20.SQL\PruebaTecnica\src\GtMotive.Estimate.Microservice.Host\Controller\V1\VehicleController.cs:line 47
+   at lambda_method3(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2023-11-27 14:41:21.151 +01:00 [ERR] Unhandled Exception
+System.NotImplementedException: The method or operation is not implemented.
+   at GtMotive.Estimate.Microservice.Infrastructure.FileSystem.FileSystemServices.GetCollectionVehicles() in C:\2023.11.20.SQL\PruebaTecnica\src\GtMotive.Estimate.Microservice.Infrastructure\FileSystem\FileSystemServices.cs:line 99
+   at GtMotive.Estimate.Microservice.Api.Repository.VehicleRepository.GetAll() in C:\2023.11.20.SQL\PruebaTecnica\src\GtMotive.Estimate.Microservice.Api\Repository\VehicleRepository.cs:line 33
+   at GtMotive.Estimate.Microservice.Api.Repository.VehicleRepository.GetAvailables() in C:\2023.11.20.SQL\PruebaTecnica\src\GtMotive.Estimate.Microservice.Api\Repository\VehicleRepository.cs:line 44
+   at GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController.GetAvailables() in C:\2023.11.20.SQL\PruebaTecnica\src\GtMotive.Estimate.Microservice.Host\Controller\V1\VehicleController.cs:line 47
+   at lambda_method3(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2023-11-27 14:41:21.160 +01:00 [INF] Executing InternalServerErrorObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2023-11-27 14:41:21.167 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController.GetAvailables (GtMotive.Estimate.Microservice.Host) in 7308.3364ms
+2023-11-27 14:41:21.171 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController.GetAvailables (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 14:41:21.172 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/api/v1/Vehicle/GetAvailables - - - 500 - application/problem+json;+charset=utf-8 7356.4191ms
+2023-11-27 14:50:59.702 +01:00 [INF] User profile is available. Using 'C:\Users\ChristianMonzonCerve\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-27 14:50:59.889 +01:00 [INF] Now listening on: https://localhost:52322
+2023-11-27 14:50:59.889 +01:00 [INF] Now listening on: http://localhost:52323
+2023-11-27 14:51:04.760 +01:00 [INF] Request starting HTTP/2 GET https://localhost:52322/ - -
+2023-11-27 14:51:04.905 +01:00 [INF] Request finished HTTP/2 GET https://localhost:52322/ - - - 404 0 - 147.1556ms
+2023-11-27 15:23:11.651 +01:00 [INF] User profile is available. Using 'C:\Users\ChristianMonzonCerve\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-27 15:23:11.837 +01:00 [INF] Now listening on: https://localhost:52322
+2023-11-27 15:23:11.837 +01:00 [INF] Now listening on: http://localhost:52323
+2023-11-27 15:23:32.421 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/swagger/index.html - -
+2023-11-27 15:23:32.781 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/swagger/index.html - - - 200 - text/html;charset=utf-8 358.8416ms
+2023-11-27 15:23:32.790 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/_framework/aspnetcore-browser-refresh.js - -
+2023-11-27 15:23:32.790 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/_vs/browserLink - -
+2023-11-27 15:23:32.794 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/_framework/aspnetcore-browser-refresh.js - - - 200 12402 application/javascript;+charset=utf-8 3.7183ms
+2023-11-27 15:23:32.855 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 64.3761ms
+2023-11-27 15:23:32.965 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/swagger/v1.0.1.0/swagger.json - -
+2023-11-27 15:23:33.089 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/swagger/v1.0.1.0/swagger.json - - - 200 - application/json;charset=utf-8 123.7480ms
+2023-11-27 15:23:38.510 +01:00 [INF] Request starting HTTP/2 GET https://localhost:52322/ - -
+2023-11-27 15:23:38.548 +01:00 [INF] Request finished HTTP/2 GET https://localhost:52322/ - - - 404 0 - 37.7421ms
+2023-11-27 15:23:44.186 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/api/v1/Vehicle/GetAvailables - -
+2023-11-27 15:23:44.219 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController.GetAvailables (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 15:23:44.229 +01:00 [INF] Route matched with {action = "GetAvailables", controller = "Vehicle"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[GtMotive.Estimate.Microservice.Host.Models.Vehicle.RequestVehicleDto]] GetAvailables() on controller GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController (GtMotive.Estimate.Microservice.Host).
+2023-11-27 15:23:59.719 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GtMotive.Estimate.Microservice.Host.Models.Vehicle.ResponseVehicleDto, GtMotive.Estimate.Microservice.Host, Version=1.0.1.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-11-27 15:23:59.728 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController.GetAvailables (GtMotive.Estimate.Microservice.Host) in 15494.1699ms
+2023-11-27 15:23:59.733 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController.GetAvailables (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 15:23:59.733 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/api/v1/Vehicle/GetAvailables - - - 200 - application/json;+charset=utf-8 15546.8511ms
+2023-11-27 15:24:07.103 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/api/v1/Vehicle/GetAvailables - -
+2023-11-27 15:24:07.109 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController.GetAvailables (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 15:24:07.110 +01:00 [INF] Route matched with {action = "GetAvailables", controller = "Vehicle"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[GtMotive.Estimate.Microservice.Host.Models.Vehicle.RequestVehicleDto]] GetAvailables() on controller GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController (GtMotive.Estimate.Microservice.Host).
+2023-11-27 15:24:15.281 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GtMotive.Estimate.Microservice.Host.Models.Vehicle.ResponseVehicleDto, GtMotive.Estimate.Microservice.Host, Version=1.0.1.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-11-27 15:24:15.282 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController.GetAvailables (GtMotive.Estimate.Microservice.Host) in 8171.7065ms
+2023-11-27 15:24:15.283 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController.GetAvailables (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 15:24:15.284 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/api/v1/Vehicle/GetAvailables - - - 200 - application/json;+charset=utf-8 8180.8603ms
+2023-11-27 15:24:31.436 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/api/v1/Vehicle/GetAll - -
+2023-11-27 15:24:31.437 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController.GetAll (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 15:24:31.439 +01:00 [INF] Route matched with {action = "GetAll", controller = "Vehicle"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[GtMotive.Estimate.Microservice.Host.Models.Vehicle.RequestVehicleDto]] GetAll() on controller GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController (GtMotive.Estimate.Microservice.Host).
+2023-11-27 15:24:35.190 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GtMotive.Estimate.Microservice.Host.Models.Vehicle.ResponseVehicleDto, GtMotive.Estimate.Microservice.Host, Version=1.0.1.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-11-27 15:24:35.191 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController.GetAll (GtMotive.Estimate.Microservice.Host) in 3751.36ms
+2023-11-27 15:24:35.191 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController.GetAll (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 15:24:35.193 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/api/v1/Vehicle/GetAll - - - 200 - application/json;+charset=utf-8 3757.4292ms
+2023-11-27 15:34:58.981 +01:00 [INF] User profile is available. Using 'C:\Users\ChristianMonzonCerve\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-27 15:34:59.138 +01:00 [INF] Now listening on: https://localhost:52322
+2023-11-27 15:34:59.138 +01:00 [INF] Now listening on: http://localhost:52323
+2023-11-27 15:35:10.962 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/api/v1/Rent/GetAll - -
+2023-11-27 15:35:11.072 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.GetAll (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 15:35:11.081 +01:00 [INF] Route matched with {action = "GetAll", controller = "Rent"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[GtMotive.Estimate.Microservice.Api.Models.RentApi]] GetAll() on controller GtMotive.Estimate.Microservice.Host.Controller.V1.RentController (GtMotive.Estimate.Microservice.Host).
+2023-11-27 15:35:11.250 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GtMotive.Estimate.Microservice.Host.Models.Rent.ResponseRentDto, GtMotive.Estimate.Microservice.Host, Version=1.0.1.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-11-27 15:35:11.279 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.GetAll (GtMotive.Estimate.Microservice.Host) in 192.9153ms
+2023-11-27 15:35:11.283 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.GetAll (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 15:35:11.285 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/api/v1/Rent/GetAll - - - 200 - application/json;+charset=utf-8 326.3451ms
+2023-11-27 15:35:20.033 +01:00 [INF] Request starting HTTP/2 GET https://localhost:52322/ - -
+2023-11-27 15:35:20.153 +01:00 [INF] Request finished HTTP/2 GET https://localhost:52322/ - - - 404 0 - 120.1458ms
+2023-11-27 15:35:20.259 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/api/v1/Rent/GetAll - -
+2023-11-27 15:35:20.263 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.GetAll (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 15:35:20.264 +01:00 [INF] Route matched with {action = "GetAll", controller = "Rent"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[GtMotive.Estimate.Microservice.Api.Models.RentApi]] GetAll() on controller GtMotive.Estimate.Microservice.Host.Controller.V1.RentController (GtMotive.Estimate.Microservice.Host).
+2023-11-27 15:35:20.283 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GtMotive.Estimate.Microservice.Host.Models.Rent.ResponseRentDto, GtMotive.Estimate.Microservice.Host, Version=1.0.1.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-11-27 15:35:20.284 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.GetAll (GtMotive.Estimate.Microservice.Host) in 18.4296ms
+2023-11-27 15:35:20.284 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.GetAll (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 15:35:20.285 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/api/v1/Rent/GetAll - - - 200 - application/json;+charset=utf-8 25.5398ms
+2023-11-27 15:35:24.503 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/api/v1/Rent/GetAll - -
+2023-11-27 15:35:24.504 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.GetAll (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 15:35:24.505 +01:00 [INF] Route matched with {action = "GetAll", controller = "Rent"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[GtMotive.Estimate.Microservice.Api.Models.RentApi]] GetAll() on controller GtMotive.Estimate.Microservice.Host.Controller.V1.RentController (GtMotive.Estimate.Microservice.Host).
+2023-11-27 15:35:24.518 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GtMotive.Estimate.Microservice.Host.Models.Rent.ResponseRentDto, GtMotive.Estimate.Microservice.Host, Version=1.0.1.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-11-27 15:35:24.518 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.GetAll (GtMotive.Estimate.Microservice.Host) in 12.6153ms
+2023-11-27 15:35:24.519 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.GetAll (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 15:35:24.520 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/api/v1/Rent/GetAll - - - 200 - application/json;+charset=utf-8 16.1338ms
+2023-11-27 15:35:29.273 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/api/v1/Rent/GetAll - -
+2023-11-27 15:35:29.273 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.GetAll (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 15:35:29.274 +01:00 [INF] Route matched with {action = "GetAll", controller = "Rent"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[GtMotive.Estimate.Microservice.Api.Models.RentApi]] GetAll() on controller GtMotive.Estimate.Microservice.Host.Controller.V1.RentController (GtMotive.Estimate.Microservice.Host).
+2023-11-27 15:35:29.278 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GtMotive.Estimate.Microservice.Host.Models.Rent.ResponseRentDto, GtMotive.Estimate.Microservice.Host, Version=1.0.1.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-11-27 15:35:29.279 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.GetAll (GtMotive.Estimate.Microservice.Host) in 4.2108ms
+2023-11-27 15:35:29.279 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.GetAll (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 15:35:29.280 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/api/v1/Rent/GetAll - - - 200 - application/json;+charset=utf-8 7.5565ms
+2023-11-27 15:35:37.523 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/api/v1/Vehicle/GetAll - -
+2023-11-27 15:35:37.525 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController.GetAll (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 15:35:37.527 +01:00 [INF] Route matched with {action = "GetAll", controller = "Vehicle"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[GtMotive.Estimate.Microservice.Host.Models.Vehicle.RequestVehicleDto]] GetAll() on controller GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController (GtMotive.Estimate.Microservice.Host).
+2023-11-27 15:35:44.699 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GtMotive.Estimate.Microservice.Host.Models.Vehicle.ResponseVehicleDto, GtMotive.Estimate.Microservice.Host, Version=1.0.1.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-11-27 15:35:44.699 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController.GetAll (GtMotive.Estimate.Microservice.Host) in 7172.0902ms
+2023-11-27 15:35:44.700 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController.GetAll (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 15:35:44.700 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/api/v1/Vehicle/GetAll - - - 200 - application/json;+charset=utf-8 7177.4309ms
+2023-11-27 15:47:14.779 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/api/v1/Vehicle/GetAll - -
+2023-11-27 15:47:14.780 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController.GetAll (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 15:47:14.781 +01:00 [INF] Route matched with {action = "GetAll", controller = "Vehicle"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[GtMotive.Estimate.Microservice.Host.Models.Vehicle.RequestVehicleDto]] GetAll() on controller GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController (GtMotive.Estimate.Microservice.Host).
+2023-11-27 15:49:06.729 +01:00 [INF] User profile is available. Using 'C:\Users\ChristianMonzonCerve\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-27 15:49:06.886 +01:00 [INF] Now listening on: https://localhost:52322
+2023-11-27 15:49:06.886 +01:00 [INF] Now listening on: http://localhost:52323
+2023-11-27 15:49:29.620 +01:00 [INF] Request starting HTTP/2 GET https://localhost:52322/ - -
+2023-11-27 15:49:29.826 +01:00 [INF] Request finished HTTP/2 GET https://localhost:52322/ - - - 404 0 - 209.1016ms
+2023-11-27 15:50:20.805 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/api/v1/Vehicle/GetAll - -
+2023-11-27 15:50:20.839 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController.GetAll (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 15:50:20.848 +01:00 [INF] Route matched with {action = "GetAll", controller = "Vehicle"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[GtMotive.Estimate.Microservice.Host.Models.Vehicle.RequestVehicleDto]] GetAll() on controller GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController (GtMotive.Estimate.Microservice.Host).
+2023-11-27 15:50:34.879 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GtMotive.Estimate.Microservice.Host.Models.Vehicle.ResponseVehicleDto, GtMotive.Estimate.Microservice.Host, Version=1.0.1.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-11-27 15:50:34.899 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController.GetAll (GtMotive.Estimate.Microservice.Host) in 14045.3091ms
+2023-11-27 15:50:34.903 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController.GetAll (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 15:50:34.904 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/api/v1/Vehicle/GetAll - - - 200 - application/json;+charset=utf-8 14099.2364ms
+2023-11-27 15:50:46.633 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/api/v1/Rent/GetAll - -
+2023-11-27 15:50:46.637 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.GetAll (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 15:50:46.638 +01:00 [INF] Route matched with {action = "GetAll", controller = "Rent"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[GtMotive.Estimate.Microservice.Api.Models.RentApi]] GetAll() on controller GtMotive.Estimate.Microservice.Host.Controller.V1.RentController (GtMotive.Estimate.Microservice.Host).
+2023-11-27 15:50:46.652 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GtMotive.Estimate.Microservice.Host.Models.Rent.ResponseRentDto, GtMotive.Estimate.Microservice.Host, Version=1.0.1.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-11-27 15:50:46.653 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.GetAll (GtMotive.Estimate.Microservice.Host) in 14.4759ms
+2023-11-27 15:50:46.654 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.GetAll (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 15:50:46.655 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/api/v1/Rent/GetAll - - - 200 - application/json;+charset=utf-8 21.1755ms
+2023-11-27 19:00:47.125 +01:00 [INF] User profile is available. Using 'C:\Users\ChristianMonzonCerve\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-27 19:00:47.298 +01:00 [INF] Now listening on: https://localhost:52322
+2023-11-27 19:00:47.299 +01:00 [INF] Now listening on: http://localhost:52323
+2023-11-27 19:00:48.760 +01:00 [INF] Request starting HTTP/2 GET https://localhost:52322/ - -
+2023-11-27 19:00:48.920 +01:00 [INF] Request finished HTTP/2 GET https://localhost:52322/ - - - 404 0 - 160.9378ms
+2023-11-27 19:02:41.377 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 115
+2023-11-27 19:02:41.405 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 19:02:41.426 +01:00 [INF] Route matched with {action = "Create", controller = "Rent"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(GtMotive.Estimate.Microservice.Host.Models.Rent.RequestRentDto) on controller GtMotive.Estimate.Microservice.Host.Controller.V1.RentController (GtMotive.Estimate.Microservice.Host).
+2023-11-27 19:03:05.513 +01:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2023-11-27 19:03:05.522 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host) in 24090.7379ms
+2023-11-27 19:03:05.523 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 19:03:05.525 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 115 - 200 0 - 24147.8025ms
+2023-11-27 19:03:49.379 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/swagger/index.html - -
+2023-11-27 19:03:49.458 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/swagger/index.html - - - 200 - text/html;charset=utf-8 78.9311ms
+2023-11-27 19:03:49.462 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/_framework/aspnetcore-browser-refresh.js - -
+2023-11-27 19:03:49.468 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/_vs/browserLink - -
+2023-11-27 19:03:49.477 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/_framework/aspnetcore-browser-refresh.js - - - 200 12402 application/javascript;+charset=utf-8 15.3636ms
+2023-11-27 19:03:49.536 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 67.9750ms
+2023-11-27 19:03:49.607 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/swagger/v1.0.1.0/swagger.json - -
+2023-11-27 19:03:49.729 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/swagger/v1.0.1.0/swagger.json - - - 200 - application/json;charset=utf-8 121.6018ms
+2023-11-27 19:03:56.636 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 130
+2023-11-27 19:03:56.640 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 19:03:56.640 +01:00 [INF] Route matched with {action = "Create", controller = "Rent"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(GtMotive.Estimate.Microservice.Host.Models.Rent.RequestRentDto) on controller GtMotive.Estimate.Microservice.Host.Controller.V1.RentController (GtMotive.Estimate.Microservice.Host).
+2023-11-27 19:03:58.635 +01:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2023-11-27 19:03:58.635 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host) in 1994.667ms
+2023-11-27 19:03:58.636 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 19:03:58.636 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 130 - 200 0 - 2000.3650ms
+2023-11-27 19:04:08.398 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 130
+2023-11-27 19:04:08.399 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 19:04:08.400 +01:00 [INF] Route matched with {action = "Create", controller = "Rent"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(GtMotive.Estimate.Microservice.Host.Models.Rent.RequestRentDto) on controller GtMotive.Estimate.Microservice.Host.Controller.V1.RentController (GtMotive.Estimate.Microservice.Host).
+2023-11-27 19:04:10.020 +01:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2023-11-27 19:04:10.020 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host) in 1619.7986ms
+2023-11-27 19:04:10.021 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 19:04:10.021 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 130 - 200 0 - 1623.3528ms
+2023-11-27 19:04:27.296 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 130
+2023-11-27 19:04:27.297 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 19:04:27.297 +01:00 [INF] Route matched with {action = "Create", controller = "Rent"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(GtMotive.Estimate.Microservice.Host.Models.Rent.RequestRentDto) on controller GtMotive.Estimate.Microservice.Host.Controller.V1.RentController (GtMotive.Estimate.Microservice.Host).
+2023-11-27 19:05:57.840 +01:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2023-11-27 19:05:57.841 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host) in 90543.315ms
+2023-11-27 19:05:57.842 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 19:05:57.849 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 130 - 200 0 - 90553.0511ms
+2023-11-27 19:05:58.813 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/swagger/index.html - -
+2023-11-27 19:05:58.819 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/swagger/index.html - - - 200 - text/html;charset=utf-8 6.0842ms
+2023-11-27 19:05:58.833 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/_framework/aspnetcore-browser-refresh.js - -
+2023-11-27 19:05:58.833 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/_vs/browserLink - -
+2023-11-27 19:05:58.835 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/_framework/aspnetcore-browser-refresh.js - - - 200 12402 application/javascript;+charset=utf-8 1.3923ms
+2023-11-27 19:05:58.851 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 18.0620ms
+2023-11-27 19:05:58.914 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/swagger/v1.0.1.0/swagger.json - -
+2023-11-27 19:05:58.918 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/swagger/v1.0.1.0/swagger.json - - - 200 - application/json;charset=utf-8 4.0329ms
+2023-11-27 19:06:03.419 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 130
+2023-11-27 19:06:03.420 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 19:06:03.423 +01:00 [INF] Route matched with {action = "Create", controller = "Rent"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(GtMotive.Estimate.Microservice.Host.Models.Rent.RequestRentDto) on controller GtMotive.Estimate.Microservice.Host.Controller.V1.RentController (GtMotive.Estimate.Microservice.Host).
+2023-11-27 19:06:05.172 +01:00 [ERR] Exception captured in BusinessExceptionFilter.
+System.MissingMethodException: Method not found: 'System.String GtMotive.Estimate.Microservice.Domain.Entities.Rent.get_UserId()'.
+   at GtMotive.Estimate.Microservice.Api.Mappers.MapperRentConfig.<>c.<Initialize>b__0_0(IMapperConfigurationExpression cfg)
+   at AutoMapper.MapperConfiguration..ctor(Action`1 configure)
+   at GtMotive.Estimate.Microservice.Api.Mappers.MapperRentConfig.Initialize()
+   at GtMotive.Estimate.Microservice.Api.Repository.RentRepository..ctor(RentSystemServices fileSystemService)
+   at ResolveService(ILEmitResolverBuilderRuntimeContext , ServiceProviderEngineScope )
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method18(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2023-11-27 19:06:05.216 +01:00 [ERR] Unhandled Exception
+System.MissingMethodException: Method not found: 'System.String GtMotive.Estimate.Microservice.Domain.Entities.Rent.get_UserId()'.
+   at GtMotive.Estimate.Microservice.Api.Mappers.MapperRentConfig.<>c.<Initialize>b__0_0(IMapperConfigurationExpression cfg)
+   at AutoMapper.MapperConfiguration..ctor(Action`1 configure)
+   at GtMotive.Estimate.Microservice.Api.Mappers.MapperRentConfig.Initialize()
+   at GtMotive.Estimate.Microservice.Api.Repository.RentRepository..ctor(RentSystemServices fileSystemService)
+   at ResolveService(ILEmitResolverBuilderRuntimeContext , ServiceProviderEngineScope )
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method18(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2023-11-27 19:06:05.223 +01:00 [INF] Executing InternalServerErrorObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2023-11-27 19:06:05.225 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host) in 1801.7787ms
+2023-11-27 19:06:05.226 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 19:06:05.226 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 130 - 500 - application/problem+json;+charset=utf-8 1807.0026ms
+2023-11-27 19:07:15.861 +01:00 [INF] User profile is available. Using 'C:\Users\ChristianMonzonCerve\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-27 19:07:16.017 +01:00 [INF] Now listening on: https://localhost:52322
+2023-11-27 19:07:16.017 +01:00 [INF] Now listening on: http://localhost:52323
+2023-11-27 19:07:26.224 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 130
+2023-11-27 19:07:26.312 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 19:07:26.331 +01:00 [INF] Route matched with {action = "Create", controller = "Rent"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(GtMotive.Estimate.Microservice.Host.Models.Rent.RequestRentDto) on controller GtMotive.Estimate.Microservice.Host.Controller.V1.RentController (GtMotive.Estimate.Microservice.Host).
+2023-11-27 19:07:32.987 +01:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2023-11-27 19:07:32.998 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host) in 6659.3039ms
+2023-11-27 19:07:32.999 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 19:07:33.002 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 130 - 200 0 - 6781.2171ms
+2023-11-27 19:07:38.695 +01:00 [INF] Request starting HTTP/2 GET https://localhost:52322/ - -
+2023-11-27 19:07:38.806 +01:00 [INF] Request finished HTTP/2 GET https://localhost:52322/ - - - 404 0 - 110.5927ms
+2023-11-27 19:07:41.260 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 130
+2023-11-27 19:07:41.264 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 19:07:41.264 +01:00 [INF] Route matched with {action = "Create", controller = "Rent"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(GtMotive.Estimate.Microservice.Host.Models.Rent.RequestRentDto) on controller GtMotive.Estimate.Microservice.Host.Controller.V1.RentController (GtMotive.Estimate.Microservice.Host).
+2023-11-27 19:08:15.299 +01:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2023-11-27 19:08:15.299 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host) in 34034.3847ms
+2023-11-27 19:08:15.300 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 19:08:15.301 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 130 - 200 0 - 34040.7203ms
+2023-11-27 20:01:48.671 +01:00 [INF] User profile is available. Using 'C:\Users\ChristianMonzonCerve\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-27 20:01:48.846 +01:00 [INF] Now listening on: https://localhost:52322
+2023-11-27 20:01:48.846 +01:00 [INF] Now listening on: http://localhost:52323
+2023-11-27 20:02:29.318 +01:00 [INF] Request starting HTTP/2 GET https://localhost:52322/ - -
+2023-11-27 20:02:29.532 +01:00 [INF] Request finished HTTP/2 GET https://localhost:52322/ - - - 404 0 - 216.5457ms
+2023-11-27 20:02:35.715 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/api/v1/Vehicle/GetAll - -
+2023-11-27 20:02:35.737 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController.GetAll (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 20:02:35.746 +01:00 [INF] Route matched with {action = "GetAll", controller = "Vehicle"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[GtMotive.Estimate.Microservice.Host.Models.Vehicle.RequestVehicleDto]] GetAll() on controller GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController (GtMotive.Estimate.Microservice.Host).
+2023-11-27 20:03:14.863 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GtMotive.Estimate.Microservice.Host.Models.Vehicle.ResponseVehicleDto, GtMotive.Estimate.Microservice.Host, Version=1.0.1.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-11-27 20:03:14.883 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController.GetAll (GtMotive.Estimate.Microservice.Host) in 39130.7897ms
+2023-11-27 20:03:14.887 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController.GetAll (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 20:03:14.888 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/api/v1/Vehicle/GetAll - - - 200 - application/json;+charset=utf-8 39172.9094ms
+2023-11-27 21:56:31.745 +01:00 [INF] User profile is available. Using 'C:\Users\ChristianMonzonCerve\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-27 21:56:32.048 +01:00 [INF] Now listening on: https://localhost:52322
+2023-11-27 21:56:32.048 +01:00 [INF] Now listening on: http://localhost:52323
+2023-11-27 21:57:05.813 +01:00 [INF] Request starting HTTP/2 GET https://localhost:52322/ - -
+2023-11-27 21:57:06.038 +01:00 [INF] Request finished HTTP/2 GET https://localhost:52322/ - - - 404 0 - 228.5392ms
+2023-11-27 21:57:32.928 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 125
+2023-11-27 21:57:32.952 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 21:57:32.971 +01:00 [INF] Route matched with {action = "Create", controller = "Rent"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(GtMotive.Estimate.Microservice.Host.Models.Rent.RequestRentDto) on controller GtMotive.Estimate.Microservice.Host.Controller.V1.RentController (GtMotive.Estimate.Microservice.Host).
+2023-11-27 21:57:38.485 +01:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2023-11-27 21:57:38.491 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host) in 5514.7397ms
+2023-11-27 21:57:38.495 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 21:57:38.496 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 125 - 400 - text/plain;+charset=utf-8 5567.5850ms
+2023-11-27 21:57:46.448 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 125
+2023-11-27 21:57:46.452 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 21:57:46.453 +01:00 [INF] Route matched with {action = "Create", controller = "Rent"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(GtMotive.Estimate.Microservice.Host.Models.Rent.RequestRentDto) on controller GtMotive.Estimate.Microservice.Host.Controller.V1.RentController (GtMotive.Estimate.Microservice.Host).
+2023-11-27 21:57:46.458 +01:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2023-11-27 21:57:46.459 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host) in 5.1389ms
+2023-11-27 21:57:46.459 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 21:57:46.460 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 125 - 400 - text/plain;+charset=utf-8 12.4501ms
+2023-11-27 21:57:49.288 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 125
+2023-11-27 21:57:49.288 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 21:57:49.289 +01:00 [INF] Route matched with {action = "Create", controller = "Rent"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(GtMotive.Estimate.Microservice.Host.Models.Rent.RequestRentDto) on controller GtMotive.Estimate.Microservice.Host.Controller.V1.RentController (GtMotive.Estimate.Microservice.Host).
+2023-11-27 21:57:49.295 +01:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2023-11-27 21:57:49.297 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host) in 6.1361ms
+2023-11-27 21:57:49.297 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 21:57:49.298 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 125 - 400 - text/plain;+charset=utf-8 10.2392ms
+2023-11-27 21:57:56.977 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 125
+2023-11-27 21:57:56.979 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 21:57:56.980 +01:00 [INF] Route matched with {action = "Create", controller = "Rent"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(GtMotive.Estimate.Microservice.Host.Models.Rent.RequestRentDto) on controller GtMotive.Estimate.Microservice.Host.Controller.V1.RentController (GtMotive.Estimate.Microservice.Host).
+2023-11-27 21:58:38.807 +01:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2023-11-27 21:58:38.813 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host) in 41832.5116ms
+2023-11-27 21:58:38.816 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 21:58:38.817 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 125 - 400 - text/plain;+charset=utf-8 41840.2310ms
+2023-11-27 21:58:38.818 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/swagger/index.html - -
+2023-11-27 21:58:38.902 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/swagger/index.html - - - 200 - text/html;charset=utf-8 83.1916ms
+2023-11-27 21:58:39.047 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/_framework/aspnetcore-browser-refresh.js - -
+2023-11-27 21:58:39.048 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/_vs/browserLink - -
+2023-11-27 21:58:39.055 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/_framework/aspnetcore-browser-refresh.js - - - 200 12402 application/javascript;+charset=utf-8 7.4792ms
+2023-11-27 21:58:39.109 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 61.4827ms
+2023-11-27 21:58:39.213 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/swagger/v1.0.1.0/swagger.json - -
+2023-11-27 21:58:39.402 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/swagger/v1.0.1.0/swagger.json - - - 200 - application/json;charset=utf-8 189.5218ms
+2023-11-27 21:58:59.224 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 125
+2023-11-27 21:58:59.225 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 21:58:59.231 +01:00 [INF] Route matched with {action = "Create", controller = "Rent"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(GtMotive.Estimate.Microservice.Host.Models.Rent.RequestRentDto) on controller GtMotive.Estimate.Microservice.Host.Controller.V1.RentController (GtMotive.Estimate.Microservice.Host).
+2023-11-27 22:01:32.158 +01:00 [INF] Executing BadRequestObjectResult, writing value of type 'null'.
+2023-11-27 22:01:32.162 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host) in 152929.4317ms
+2023-11-27 22:01:32.163 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 22:01:32.168 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 125 - 400 0 - 152941.6360ms
+2023-11-27 22:01:33.166 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/swagger/index.html - -
+2023-11-27 22:01:33.178 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/swagger/index.html - - - 200 - text/html;charset=utf-8 11.3120ms
+2023-11-27 22:01:33.190 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/_framework/aspnetcore-browser-refresh.js - -
+2023-11-27 22:01:33.191 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/_vs/browserLink - -
+2023-11-27 22:01:33.192 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/_framework/aspnetcore-browser-refresh.js - - - 200 12402 application/javascript;+charset=utf-8 1.6794ms
+2023-11-27 22:01:33.208 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 17.0166ms
+2023-11-27 22:01:33.324 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/swagger/v1.0.1.0/swagger.json - -
+2023-11-27 22:01:33.331 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/swagger/v1.0.1.0/swagger.json - - - 200 - application/json;charset=utf-8 6.8339ms
+2023-11-27 22:01:54.520 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 125
+2023-11-27 22:01:54.525 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 22:01:54.532 +01:00 [INF] Route matched with {action = "Create", controller = "Rent"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(GtMotive.Estimate.Microservice.Host.Models.Rent.RequestRentDto) on controller GtMotive.Estimate.Microservice.Host.Controller.V1.RentController (GtMotive.Estimate.Microservice.Host).
+2023-11-27 22:02:08.450 +01:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2023-11-27 22:02:08.450 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host) in 13917.4637ms
+2023-11-27 22:02:08.451 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 22:02:08.452 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 125 - 200 0 - 13933.2139ms
+2023-11-27 22:02:48.602 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 125
+2023-11-27 22:02:48.604 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 22:02:48.604 +01:00 [INF] Route matched with {action = "Create", controller = "Rent"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(GtMotive.Estimate.Microservice.Host.Models.Rent.RequestRentDto) on controller GtMotive.Estimate.Microservice.Host.Controller.V1.RentController (GtMotive.Estimate.Microservice.Host).
+2023-11-27 22:02:58.187 +01:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2023-11-27 22:02:58.187 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host) in 9582.4787ms
+2023-11-27 22:02:58.188 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 22:02:58.189 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 125 - 400 - text/plain;+charset=utf-8 9587.1815ms
+2023-11-27 22:04:19.837 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 125
+2023-11-27 22:04:19.838 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 22:04:19.839 +01:00 [INF] Route matched with {action = "Create", controller = "Rent"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(GtMotive.Estimate.Microservice.Host.Models.Rent.RequestRentDto) on controller GtMotive.Estimate.Microservice.Host.Controller.V1.RentController (GtMotive.Estimate.Microservice.Host).
+2023-11-27 22:08:34.528 +01:00 [INF] User profile is available. Using 'C:\Users\ChristianMonzonCerve\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-27 22:08:34.720 +01:00 [INF] Now listening on: https://localhost:52322
+2023-11-27 22:08:34.720 +01:00 [INF] Now listening on: http://localhost:52323
+2023-11-27 22:09:01.856 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 125
+2023-11-27 22:09:01.942 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 22:09:01.962 +01:00 [INF] Route matched with {action = "Create", controller = "Rent"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(GtMotive.Estimate.Microservice.Host.Models.Rent.RequestRentDto) on controller GtMotive.Estimate.Microservice.Host.Controller.V1.RentController (GtMotive.Estimate.Microservice.Host).
+2023-11-27 22:11:48.969 +01:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2023-11-27 22:11:48.977 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host) in 167010.1622ms
+2023-11-27 22:11:48.979 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 22:11:48.980 +01:00 [INF] Request starting HTTP/2 GET https://localhost:52322/ - -
+2023-11-27 22:11:48.982 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 125 - 200 0 - 167129.0275ms
+2023-11-27 22:11:49.106 +01:00 [INF] Request finished HTTP/2 GET https://localhost:52322/ - - - 404 0 - 125.8688ms
+2023-11-27 22:11:54.352 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 125
+2023-11-27 22:11:54.357 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 22:11:54.358 +01:00 [INF] Route matched with {action = "Create", controller = "Rent"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(GtMotive.Estimate.Microservice.Host.Models.Rent.RequestRentDto) on controller GtMotive.Estimate.Microservice.Host.Controller.V1.RentController (GtMotive.Estimate.Microservice.Host).
+2023-11-27 22:12:02.906 +01:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2023-11-27 22:12:02.906 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host) in 8547.1351ms
+2023-11-27 22:12:02.907 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 22:12:02.907 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 125 - 200 0 - 8554.6231ms
+2023-11-27 22:12:46.144 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 125
+2023-11-27 22:12:46.149 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-27 22:12:46.151 +01:00 [INF] Route matched with {action = "Create", controller = "Rent"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(GtMotive.Estimate.Microservice.Host.Models.Rent.RequestRentDto) on controller GtMotive.Estimate.Microservice.Host.Controller.V1.RentController (GtMotive.Estimate.Microservice.Host).
+2023-11-27 22:24:16.247 +01:00 [INF] User profile is available. Using 'C:\Users\ChristianMonzonCerve\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-27 22:24:16.451 +01:00 [INF] Now listening on: https://localhost:52322
+2023-11-27 22:24:16.451 +01:00 [INF] Now listening on: http://localhost:52323
+2023-11-27 22:24:38.403 +01:00 [INF] User profile is available. Using 'C:\Users\ChristianMonzonCerve\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-27 22:24:38.581 +01:00 [INF] Now listening on: https://localhost:52322
+2023-11-27 22:24:38.581 +01:00 [INF] Now listening on: http://localhost:52323
+2023-11-28 01:57:00.800 +01:00 [INF] User profile is available. Using 'C:\Users\ChristianMonzonCerve\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-28 01:57:01.000 +01:00 [INF] Now listening on: https://localhost:52322
+2023-11-28 01:57:01.000 +01:00 [INF] Now listening on: http://localhost:52323
+2023-11-28 01:57:31.850 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 125
+2023-11-28 01:57:31.968 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-28 01:57:32.059 +01:00 [INF] Route matched with {action = "Create", controller = "Rent"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(GtMotive.Estimate.Microservice.Host.Models.Rent.RequestRentDto) on controller GtMotive.Estimate.Microservice.Host.Controller.V1.RentController (GtMotive.Estimate.Microservice.Host).
+2023-11-28 01:58:08.383 +01:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2023-11-28 01:58:08.391 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host) in 36326.6018ms
+2023-11-28 01:58:08.433 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-28 01:58:08.438 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 125 - 400 - text/plain;+charset=utf-8 36593.4530ms
+2023-11-28 01:58:08.467 +01:00 [INF] Request starting HTTP/2 GET https://localhost:52322/ - -
+2023-11-28 01:58:08.601 +01:00 [INF] Request finished HTTP/2 GET https://localhost:52322/ - - - 404 0 - 133.6952ms
+2023-11-28 01:58:30.854 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/api/v1/Vehicle/GetAvailables - -
+2023-11-28 01:58:30.859 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController.GetAvailables (GtMotive.Estimate.Microservice.Host)'
+2023-11-28 01:58:30.861 +01:00 [INF] Route matched with {action = "GetAvailables", controller = "Vehicle"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[GtMotive.Estimate.Microservice.Host.Models.Vehicle.RequestVehicleDto]] GetAvailables() on controller GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController (GtMotive.Estimate.Microservice.Host).
+2023-11-28 01:58:34.167 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GtMotive.Estimate.Microservice.Host.Models.Vehicle.ResponseVehicleDto, GtMotive.Estimate.Microservice.Host, Version=1.0.1.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-11-28 01:58:34.178 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController.GetAvailables (GtMotive.Estimate.Microservice.Host) in 3316.9254ms
+2023-11-28 01:58:34.179 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController.GetAvailables (GtMotive.Estimate.Microservice.Host)'
+2023-11-28 01:58:34.179 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/api/v1/Vehicle/GetAvailables - - - 200 - application/json;+charset=utf-8 3325.0549ms
+2023-11-28 01:58:36.737 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/api/v1/Vehicle/GetAvailables - -
+2023-11-28 01:58:36.743 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController.GetAvailables (GtMotive.Estimate.Microservice.Host)'
+2023-11-28 01:58:36.746 +01:00 [INF] Route matched with {action = "GetAvailables", controller = "Vehicle"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[GtMotive.Estimate.Microservice.Host.Models.Vehicle.RequestVehicleDto]] GetAvailables() on controller GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController (GtMotive.Estimate.Microservice.Host).
+2023-11-28 01:58:36.752 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GtMotive.Estimate.Microservice.Host.Models.Vehicle.ResponseVehicleDto, GtMotive.Estimate.Microservice.Host, Version=1.0.1.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-11-28 01:58:36.753 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController.GetAvailables (GtMotive.Estimate.Microservice.Host) in 5.6568ms
+2023-11-28 01:58:36.753 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController.GetAvailables (GtMotive.Estimate.Microservice.Host)'
+2023-11-28 01:58:36.754 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/api/v1/Vehicle/GetAvailables - - - 200 - application/json;+charset=utf-8 17.3890ms
+2023-11-28 01:58:49.849 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/api/v1/Vehicle/Get/2 - -
+2023-11-28 01:58:49.860 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController.Get (GtMotive.Estimate.Microservice.Host)'
+2023-11-28 01:58:49.864 +01:00 [INF] Route matched with {action = "Get", controller = "Vehicle"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[GtMotive.Estimate.Microservice.Host.Models.Vehicle.ResponseVehicleDto] Get(System.String) on controller GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController (GtMotive.Estimate.Microservice.Host).
+2023-11-28 01:58:49.872 +01:00 [INF] Executing OkObjectResult, writing value of type 'GtMotive.Estimate.Microservice.Host.Models.Vehicle.ResponseVehicleDto'.
+2023-11-28 01:58:49.873 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController.Get (GtMotive.Estimate.Microservice.Host) in 7.0694ms
+2023-11-28 01:58:49.873 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController.Get (GtMotive.Estimate.Microservice.Host)'
+2023-11-28 01:58:49.873 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/api/v1/Vehicle/Get/2 - - - 200 - application/json;+charset=utf-8 25.0849ms
+2023-11-28 03:41:17.554 +01:00 [INF] User profile is available. Using 'C:\Users\ChristianMonzonCerve\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-28 03:41:17.713 +01:00 [INF] Now listening on: https://localhost:52322
+2023-11-28 03:41:17.713 +01:00 [INF] Now listening on: http://localhost:52323
+2023-11-28 03:41:28.860 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/swagger/index.html - -
+2023-11-28 03:41:29.121 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/swagger/index.html - - - 200 - text/html;charset=utf-8 263.6970ms
+2023-11-28 03:41:29.121 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/_vs/browserLink - -
+2023-11-28 03:41:29.130 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/_framework/aspnetcore-browser-refresh.js - -
+2023-11-28 03:41:29.135 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/_framework/aspnetcore-browser-refresh.js - - - 200 12402 application/javascript;+charset=utf-8 4.7251ms
+2023-11-28 03:41:29.190 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 68.6624ms
+2023-11-28 03:41:29.268 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/swagger/v1.0.1.0/swagger.json - -
+2023-11-28 03:41:29.397 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/swagger/v1.0.1.0/swagger.json - - - 200 - application/json;charset=utf-8 129.4224ms
+2023-11-28 03:41:37.994 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/api/v1/Vehicle/GetAll - -
+2023-11-28 03:41:38.037 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController.GetAll (GtMotive.Estimate.Microservice.Host)'
+2023-11-28 03:41:38.047 +01:00 [INF] Route matched with {action = "GetAll", controller = "Vehicle"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[GtMotive.Estimate.Microservice.Host.Models.Vehicle.RequestVehicleDto]] GetAll() on controller GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController (GtMotive.Estimate.Microservice.Host).
+2023-11-28 03:41:38.260 +01:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2023-11-28 03:41:38.266 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController.GetAll (GtMotive.Estimate.Microservice.Host) in 213.6169ms
+2023-11-28 03:41:38.272 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController.GetAll (GtMotive.Estimate.Microservice.Host)'
+2023-11-28 03:41:38.273 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/api/v1/Vehicle/GetAll - - - 500 - text/plain;+charset=utf-8 279.2937ms
+2023-11-28 03:41:43.770 +01:00 [INF] Request starting HTTP/2 GET https://localhost:52322/ - -
+2023-11-28 03:41:43.787 +01:00 [INF] Request finished HTTP/2 GET https://localhost:52322/ - - - 404 0 - 17.5174ms
+2023-11-28 03:42:08.967 +01:00 [INF] User profile is available. Using 'C:\Users\ChristianMonzonCerve\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-28 03:42:09.140 +01:00 [INF] Now listening on: https://localhost:52322
+2023-11-28 03:42:09.141 +01:00 [INF] Now listening on: http://localhost:52323
+2023-11-28 03:42:15.416 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/api/v1/Rent/GetAll - -
+2023-11-28 03:42:15.493 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.GetAll (GtMotive.Estimate.Microservice.Host)'
+2023-11-28 03:42:15.498 +01:00 [INF] Route matched with {action = "GetAll", controller = "Rent"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[GtMotive.Estimate.Microservice.Api.Models.RentApi]] GetAll() on controller GtMotive.Estimate.Microservice.Host.Controller.V1.RentController (GtMotive.Estimate.Microservice.Host).
+2023-11-28 03:42:15.631 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GtMotive.Estimate.Microservice.Host.Models.Rent.ResponseRentDto, GtMotive.Estimate.Microservice.Host, Version=1.0.1.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-11-28 03:42:15.648 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.GetAll (GtMotive.Estimate.Microservice.Host) in 146.0024ms
+2023-11-28 03:42:15.651 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.GetAll (GtMotive.Estimate.Microservice.Host)'
+2023-11-28 03:42:15.653 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/api/v1/Rent/GetAll - - - 200 - application/json;+charset=utf-8 239.2531ms
+2023-11-28 03:42:22.005 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/api/v1/Vehicle/GetAvailables - -
+2023-11-28 03:42:22.008 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController.GetAvailables (GtMotive.Estimate.Microservice.Host)'
+2023-11-28 03:42:22.009 +01:00 [INF] Route matched with {action = "GetAvailables", controller = "Vehicle"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[GtMotive.Estimate.Microservice.Host.Models.Vehicle.RequestVehicleDto]] GetAvailables() on controller GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController (GtMotive.Estimate.Microservice.Host).
+2023-11-28 03:42:22.031 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GtMotive.Estimate.Microservice.Host.Models.Vehicle.ResponseVehicleDto, GtMotive.Estimate.Microservice.Host, Version=1.0.1.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-11-28 03:42:22.033 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController.GetAvailables (GtMotive.Estimate.Microservice.Host) in 20.0069ms
+2023-11-28 03:42:22.034 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController.GetAvailables (GtMotive.Estimate.Microservice.Host)'
+2023-11-28 03:42:22.035 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/api/v1/Vehicle/GetAvailables - - - 200 - application/json;+charset=utf-8 29.7295ms
+2023-11-28 03:42:24.819 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/api/v1/Vehicle/GetAll - -
+2023-11-28 03:42:24.823 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController.GetAll (GtMotive.Estimate.Microservice.Host)'
+2023-11-28 03:42:24.826 +01:00 [INF] Route matched with {action = "GetAll", controller = "Vehicle"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[GtMotive.Estimate.Microservice.Host.Models.Vehicle.RequestVehicleDto]] GetAll() on controller GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController (GtMotive.Estimate.Microservice.Host).
+2023-11-28 03:42:24.874 +01:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2023-11-28 03:42:24.876 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController.GetAll (GtMotive.Estimate.Microservice.Host) in 48.898ms
+2023-11-28 03:42:24.877 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController.GetAll (GtMotive.Estimate.Microservice.Host)'
+2023-11-28 03:42:24.877 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/api/v1/Vehicle/GetAll - - - 500 - text/plain;+charset=utf-8 58.4740ms
+2023-11-28 03:42:38.563 +01:00 [INF] Request starting HTTP/2 GET https://localhost:52322/ - -
+2023-11-28 03:42:38.683 +01:00 [INF] Request finished HTTP/2 GET https://localhost:52322/ - - - 404 0 - 119.7044ms
+2023-11-28 03:42:57.258 +01:00 [INF] User profile is available. Using 'C:\Users\ChristianMonzonCerve\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-28 03:42:57.419 +01:00 [INF] Now listening on: https://localhost:52322
+2023-11-28 03:42:57.419 +01:00 [INF] Now listening on: http://localhost:52323
+2023-11-28 03:43:13.135 +01:00 [INF] Request starting HTTP/2 GET https://localhost:52322/ - -
+2023-11-28 03:43:13.335 +01:00 [INF] Request finished HTTP/2 GET https://localhost:52322/ - - - 404 0 - 204.2893ms
+2023-11-28 03:43:47.787 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/api/v1/Vehicle/GetAll - -
+2023-11-28 03:43:47.813 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController.GetAll (GtMotive.Estimate.Microservice.Host)'
+2023-11-28 03:43:47.822 +01:00 [INF] Route matched with {action = "GetAll", controller = "Vehicle"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[GtMotive.Estimate.Microservice.Host.Models.Vehicle.RequestVehicleDto]] GetAll() on controller GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController (GtMotive.Estimate.Microservice.Host).
+2023-11-28 03:47:16.727 +01:00 [INF] User profile is available. Using 'C:\Users\ChristianMonzonCerve\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-28 03:47:16.913 +01:00 [INF] Now listening on: https://localhost:52322
+2023-11-28 03:47:16.914 +01:00 [INF] Now listening on: http://localhost:52323
+2023-11-28 03:47:49.978 +01:00 [INF] User profile is available. Using 'C:\Users\ChristianMonzonCerve\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-28 03:47:50.162 +01:00 [INF] Now listening on: https://localhost:52322
+2023-11-28 03:47:50.163 +01:00 [INF] Now listening on: http://localhost:52323
+2023-11-28 03:48:01.384 +01:00 [INF] User profile is available. Using 'C:\Users\ChristianMonzonCerve\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-28 03:48:01.570 +01:00 [INF] Now listening on: https://localhost:52322
+2023-11-28 03:48:01.571 +01:00 [INF] Now listening on: http://localhost:52323
+2023-11-28 03:48:08.736 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/api/v1/Vehicle/GetAll - -
+2023-11-28 03:48:08.846 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController.GetAll (GtMotive.Estimate.Microservice.Host)'
+2023-11-28 03:48:08.855 +01:00 [INF] Route matched with {action = "GetAll", controller = "Vehicle"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[GtMotive.Estimate.Microservice.Api.Models.VehicleApi]] GetAll() on controller GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController (GtMotive.Estimate.Microservice.Host).
+2023-11-28 03:49:32.414 +01:00 [INF] Request starting HTTP/2 GET https://localhost:52322/ - -
+2023-11-28 03:49:32.421 +01:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2023-11-28 03:49:32.434 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController.GetAll (GtMotive.Estimate.Microservice.Host) in 83574.0104ms
+2023-11-28 03:49:32.439 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController.GetAll (GtMotive.Estimate.Microservice.Host)'
+2023-11-28 03:49:32.442 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/api/v1/Vehicle/GetAll - - - 500 - text/plain;+charset=utf-8 83709.4393ms
+2023-11-28 03:49:32.539 +01:00 [INF] Request finished HTTP/2 GET https://localhost:52322/ - - - 404 0 - 124.6792ms
+2023-11-28 03:49:37.632 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/swagger/index.html - -
+2023-11-28 03:49:37.710 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/swagger/index.html - - - 200 - text/html;charset=utf-8 77.9346ms
+2023-11-28 03:49:37.726 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/_framework/aspnetcore-browser-refresh.js - -
+2023-11-28 03:49:37.727 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/_vs/browserLink - -
+2023-11-28 03:49:37.732 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/_framework/aspnetcore-browser-refresh.js - - - 200 12402 application/javascript;+charset=utf-8 5.6709ms
+2023-11-28 03:49:37.792 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 64.8688ms
+2023-11-28 03:49:37.864 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/swagger/v1.0.1.0/swagger.json - -
+2023-11-28 03:49:37.986 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/swagger/v1.0.1.0/swagger.json - - - 200 - application/json;charset=utf-8 122.7665ms
+2023-11-28 03:49:46.164 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/api/v1/Vehicle/GetAll - -
+2023-11-28 03:49:46.180 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController.GetAll (GtMotive.Estimate.Microservice.Host)'
+2023-11-28 03:49:46.181 +01:00 [INF] Route matched with {action = "GetAll", controller = "Vehicle"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[GtMotive.Estimate.Microservice.Api.Models.VehicleApi]] GetAll() on controller GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController (GtMotive.Estimate.Microservice.Host).
+2023-11-28 03:52:02.914 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GtMotive.Estimate.Microservice.Host.Models.Vehicle.ResponseVehicleDto, GtMotive.Estimate.Microservice.Host, Version=1.0.1.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-11-28 03:52:02.923 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController.GetAll (GtMotive.Estimate.Microservice.Host) in 136740.9882ms
+2023-11-28 03:52:02.924 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController.GetAll (GtMotive.Estimate.Microservice.Host)'
+2023-11-28 03:52:02.925 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/api/v1/Vehicle/GetAll - - - 200 - application/json;+charset=utf-8 136760.9595ms
+2023-11-28 03:52:12.470 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/api/v1/Vehicle/GetAll - -
+2023-11-28 03:52:12.472 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController.GetAll (GtMotive.Estimate.Microservice.Host)'
+2023-11-28 03:52:12.475 +01:00 [INF] Route matched with {action = "GetAll", controller = "Vehicle"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[GtMotive.Estimate.Microservice.Api.Models.VehicleApi]] GetAll() on controller GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController (GtMotive.Estimate.Microservice.Host).
+2023-11-28 03:52:14.604 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GtMotive.Estimate.Microservice.Host.Models.Vehicle.ResponseVehicleDto, GtMotive.Estimate.Microservice.Host, Version=1.0.1.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-11-28 03:52:14.606 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController.GetAll (GtMotive.Estimate.Microservice.Host) in 2130.2172ms
+2023-11-28 03:52:14.607 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController.GetAll (GtMotive.Estimate.Microservice.Host)'
+2023-11-28 03:52:14.608 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/api/v1/Vehicle/GetAll - - - 200 - application/json;+charset=utf-8 2138.4727ms
+2023-11-28 03:52:24.099 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/api/v1/Rent/GetAll - -
+2023-11-28 03:52:24.101 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.GetAll (GtMotive.Estimate.Microservice.Host)'
+2023-11-28 03:52:24.108 +01:00 [INF] Route matched with {action = "GetAll", controller = "Rent"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[GtMotive.Estimate.Microservice.Api.Models.RentApi]] GetAll() on controller GtMotive.Estimate.Microservice.Host.Controller.V1.RentController (GtMotive.Estimate.Microservice.Host).
+2023-11-28 03:52:24.139 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GtMotive.Estimate.Microservice.Host.Models.Rent.ResponseRentDto, GtMotive.Estimate.Microservice.Host, Version=1.0.1.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-11-28 03:52:24.142 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.GetAll (GtMotive.Estimate.Microservice.Host) in 28.8266ms
+2023-11-28 03:52:24.143 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.GetAll (GtMotive.Estimate.Microservice.Host)'
+2023-11-28 03:52:24.144 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/api/v1/Rent/GetAll - - - 200 - application/json;+charset=utf-8 44.6899ms
+2023-11-28 03:52:31.275 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/api/v1/Vehicle/GetAll - -
+2023-11-28 03:52:31.282 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController.GetAll (GtMotive.Estimate.Microservice.Host)'
+2023-11-28 03:52:31.283 +01:00 [INF] Route matched with {action = "GetAll", controller = "Vehicle"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[GtMotive.Estimate.Microservice.Api.Models.VehicleApi]] GetAll() on controller GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController (GtMotive.Estimate.Microservice.Host).
+2023-11-28 03:52:34.850 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[GtMotive.Estimate.Microservice.Host.Models.Vehicle.ResponseVehicleDto, GtMotive.Estimate.Microservice.Host, Version=1.0.1.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-11-28 03:52:34.852 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController.GetAll (GtMotive.Estimate.Microservice.Host) in 3568.2175ms
+2023-11-28 03:52:34.853 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController.GetAll (GtMotive.Estimate.Microservice.Host)'
+2023-11-28 03:52:34.854 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/api/v1/Vehicle/GetAll - - - 200 - application/json;+charset=utf-8 3578.4462ms
+2023-11-28 03:52:45.998 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/api/v1/Vehicle/Get/2 - -
+2023-11-28 03:52:45.999 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController.Get (GtMotive.Estimate.Microservice.Host)'
+2023-11-28 03:52:46.024 +01:00 [INF] Route matched with {action = "Get", controller = "Vehicle"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[GtMotive.Estimate.Microservice.Host.Models.Vehicle.ResponseVehicleDto] Get(System.String) on controller GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController (GtMotive.Estimate.Microservice.Host).
+2023-11-28 03:52:46.036 +01:00 [INF] Executing OkObjectResult, writing value of type 'GtMotive.Estimate.Microservice.Api.Models.VehicleApi'.
+2023-11-28 03:52:46.038 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController.Get (GtMotive.Estimate.Microservice.Host) in 13.093ms
+2023-11-28 03:52:46.039 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.VehicleController.Get (GtMotive.Estimate.Microservice.Host)'
+2023-11-28 03:52:46.040 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/api/v1/Vehicle/Get/2 - - - 200 - application/json;+charset=utf-8 42.3471ms
+2023-11-28 03:55:00.057 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/api/v1/Rent/Get/3 - -
+2023-11-28 03:55:00.059 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Get (GtMotive.Estimate.Microservice.Host)'
+2023-11-28 03:55:00.060 +01:00 [INF] Route matched with {action = "Get", controller = "Rent"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[GtMotive.Estimate.Microservice.Api.Models.RentApi] Get(System.String) on controller GtMotive.Estimate.Microservice.Host.Controller.V1.RentController (GtMotive.Estimate.Microservice.Host).
+2023-11-28 03:55:00.069 +01:00 [INF] Executing OkObjectResult, writing value of type 'GtMotive.Estimate.Microservice.Api.Models.RentApi'.
+2023-11-28 03:55:00.071 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Get (GtMotive.Estimate.Microservice.Host) in 7.7364ms
+2023-11-28 03:55:00.072 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Get (GtMotive.Estimate.Microservice.Host)'
+2023-11-28 03:55:00.072 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/api/v1/Rent/Get/3 - - - 200 - application/json;+charset=utf-8 15.3018ms
+2023-11-28 03:55:48.012 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 42
+2023-11-28 03:55:48.014 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-28 03:55:48.016 +01:00 [INF] Route matched with {action = "Create", controller = "Rent"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(GtMotive.Estimate.Microservice.Host.Models.Rent.RequestRentDto) on controller GtMotive.Estimate.Microservice.Host.Controller.V1.RentController (GtMotive.Estimate.Microservice.Host).
+2023-11-28 03:55:48.031 +01:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2023-11-28 03:55:48.032 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host) in 15.1298ms
+2023-11-28 03:55:48.033 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-28 03:55:48.034 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 42 - 400 - text/plain;+charset=utf-8 22.0289ms
+2023-11-28 03:56:28.033 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 42
+2023-11-28 03:56:28.035 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-28 03:56:28.036 +01:00 [INF] Route matched with {action = "Create", controller = "Rent"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(GtMotive.Estimate.Microservice.Host.Models.Rent.RequestRentDto) on controller GtMotive.Estimate.Microservice.Host.Controller.V1.RentController (GtMotive.Estimate.Microservice.Host).
+2023-11-28 03:56:42.934 +01:00 [INF] User profile is available. Using 'C:\Users\ChristianMonzonCerve\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-28 03:56:43.116 +01:00 [INF] Now listening on: https://localhost:52322
+2023-11-28 03:56:43.116 +01:00 [INF] Now listening on: http://localhost:52323
+2023-11-28 03:56:53.076 +01:00 [INF] User profile is available. Using 'C:\Users\ChristianMonzonCerve\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-28 03:56:53.261 +01:00 [INF] Now listening on: https://localhost:52322
+2023-11-28 03:56:53.261 +01:00 [INF] Now listening on: http://localhost:52323
+2023-11-28 03:57:05.149 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 42
+2023-11-28 03:57:05.240 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-28 03:57:05.259 +01:00 [INF] Route matched with {action = "Create", controller = "Rent"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(GtMotive.Estimate.Microservice.Host.Models.Rent.RequestRentDto) on controller GtMotive.Estimate.Microservice.Host.Controller.V1.RentController (GtMotive.Estimate.Microservice.Host).
+2023-11-28 03:58:41.221 +01:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2023-11-28 03:58:41.228 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host) in 95963.8828ms
+2023-11-28 03:58:41.233 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-28 03:58:41.235 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 42 - 400 - text/plain;+charset=utf-8 96089.5785ms
+2023-11-28 03:58:43.126 +01:00 [INF] Request starting HTTP/2 GET https://localhost:52322/ - -
+2023-11-28 03:58:43.236 +01:00 [INF] Request finished HTTP/2 GET https://localhost:52322/ - - - 404 0 - 109.9430ms
+2023-11-28 04:10:32.359 +01:00 [INF] User profile is available. Using 'C:\Users\ChristianMonzonCerve\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-28 04:10:32.600 +01:00 [INF] Now listening on: https://localhost:52322
+2023-11-28 04:10:32.600 +01:00 [INF] Now listening on: http://localhost:52323
+2023-11-28 04:10:39.276 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 42
+2023-11-28 04:10:39.367 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-28 04:10:39.387 +01:00 [INF] Route matched with {action = "Create", controller = "Rent"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(GtMotive.Estimate.Microservice.Host.Models.Rent.RequestRentDto) on controller GtMotive.Estimate.Microservice.Host.Controller.V1.RentController (GtMotive.Estimate.Microservice.Host).
+2023-11-28 04:10:56.015 +01:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2023-11-28 04:10:56.024 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host) in 16631.9143ms
+2023-11-28 04:10:56.028 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-28 04:10:56.031 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 42 - 400 - text/plain;+charset=utf-8 16758.5936ms
+2023-11-28 04:10:56.061 +01:00 [INF] Request starting HTTP/2 GET https://localhost:52322/ - -
+2023-11-28 04:10:56.172 +01:00 [INF] Request finished HTTP/2 GET https://localhost:52322/ - - - 404 0 - 111.1518ms
+2023-11-28 04:21:23.722 +01:00 [INF] User profile is available. Using 'C:\Users\ChristianMonzonCerve\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-28 04:21:23.900 +01:00 [INF] Now listening on: https://localhost:52322
+2023-11-28 04:21:23.900 +01:00 [INF] Now listening on: http://localhost:52323
+2023-11-28 04:21:57.335 +01:00 [INF] Request starting HTTP/2 GET https://localhost:52322/ - -
+2023-11-28 04:21:57.534 +01:00 [INF] Request finished HTTP/2 GET https://localhost:52322/ - - - 404 0 - 202.2187ms
+2023-11-28 04:22:01.948 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 42
+2023-11-28 04:22:01.964 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-28 04:22:01.983 +01:00 [INF] Route matched with {action = "Create", controller = "Rent"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(GtMotive.Estimate.Microservice.Host.Models.Rent.RequestRentDto) on controller GtMotive.Estimate.Microservice.Host.Controller.V1.RentController (GtMotive.Estimate.Microservice.Host).
+2023-11-28 04:24:12.411 +01:00 [INF] User profile is available. Using 'C:\Users\ChristianMonzonCerve\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-28 04:24:12.592 +01:00 [INF] Now listening on: https://localhost:52322
+2023-11-28 04:24:12.593 +01:00 [INF] Now listening on: http://localhost:52323
+2023-11-28 04:24:30.849 +01:00 [INF] User profile is available. Using 'C:\Users\ChristianMonzonCerve\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-28 04:24:31.015 +01:00 [INF] Now listening on: https://localhost:52322
+2023-11-28 04:24:31.015 +01:00 [INF] Now listening on: http://localhost:52323
+2023-11-28 04:24:46.636 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 42
+2023-11-28 04:24:46.728 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-28 04:24:46.747 +01:00 [INF] Route matched with {action = "Create", controller = "Rent"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(GtMotive.Estimate.Microservice.Host.Models.Rent.RequestRentDto) on controller GtMotive.Estimate.Microservice.Host.Controller.V1.RentController (GtMotive.Estimate.Microservice.Host).
+2023-11-28 04:25:20.921 +01:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2023-11-28 04:25:20.923 +01:00 [INF] Request starting HTTP/2 GET https://localhost:52322/ - -
+2023-11-28 04:25:20.931 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host) in 34175.4288ms
+2023-11-28 04:25:20.936 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-28 04:25:20.939 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 42 - 400 - text/plain;+charset=utf-8 34305.9832ms
+2023-11-28 04:25:21.061 +01:00 [INF] Request finished HTTP/2 GET https://localhost:52322/ - - - 404 0 - 137.2715ms
+2023-11-28 04:26:28.061 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 42
+2023-11-28 04:26:28.068 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-28 04:26:28.069 +01:00 [INF] Route matched with {action = "Create", controller = "Rent"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(GtMotive.Estimate.Microservice.Host.Models.Rent.RequestRentDto) on controller GtMotive.Estimate.Microservice.Host.Controller.V1.RentController (GtMotive.Estimate.Microservice.Host).
+2023-11-28 04:29:05.823 +01:00 [INF] User profile is available. Using 'C:\Users\ChristianMonzonCerve\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-28 04:29:06.000 +01:00 [INF] Now listening on: https://localhost:52322
+2023-11-28 04:29:06.000 +01:00 [INF] Now listening on: http://localhost:52323
+2023-11-28 04:29:17.605 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 42
+2023-11-28 04:29:17.693 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-28 04:29:17.712 +01:00 [INF] Route matched with {action = "Create", controller = "Rent"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(GtMotive.Estimate.Microservice.Host.Models.Rent.RequestRentDto) on controller GtMotive.Estimate.Microservice.Host.Controller.V1.RentController (GtMotive.Estimate.Microservice.Host).
+2023-11-28 04:30:06.186 +01:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2023-11-28 04:30:06.194 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host) in 48475.6382ms
+2023-11-28 04:30:06.198 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-28 04:30:06.200 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 42 - 400 - text/plain;+charset=utf-8 48598.1664ms
+2023-11-28 04:30:06.200 +01:00 [INF] Request starting HTTP/2 GET https://localhost:52322/ - -
+2023-11-28 04:30:06.322 +01:00 [INF] Request finished HTTP/2 GET https://localhost:52322/ - - - 404 0 - 121.3205ms
+2023-11-28 04:31:05.976 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 42
+2023-11-28 04:31:05.983 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-28 04:31:05.983 +01:00 [INF] Route matched with {action = "Create", controller = "Rent"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(GtMotive.Estimate.Microservice.Host.Models.Rent.RequestRentDto) on controller GtMotive.Estimate.Microservice.Host.Controller.V1.RentController (GtMotive.Estimate.Microservice.Host).
+2023-11-28 04:31:09.006 +01:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2023-11-28 04:31:09.008 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host) in 3023.6267ms
+2023-11-28 04:31:09.009 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-28 04:31:09.010 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 42 - 400 - text/plain;+charset=utf-8 3033.4423ms
+2023-11-28 04:31:42.142 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 42
+2023-11-28 04:31:42.143 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-28 04:31:42.146 +01:00 [INF] Route matched with {action = "Create", controller = "Rent"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(GtMotive.Estimate.Microservice.Host.Models.Rent.RequestRentDto) on controller GtMotive.Estimate.Microservice.Host.Controller.V1.RentController (GtMotive.Estimate.Microservice.Host).
+2023-11-28 04:35:21.390 +01:00 [INF] User profile is available. Using 'C:\Users\ChristianMonzonCerve\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-28 04:35:21.573 +01:00 [INF] Now listening on: https://localhost:52322
+2023-11-28 04:35:21.573 +01:00 [INF] Now listening on: http://localhost:52323
+2023-11-28 04:35:27.520 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 42
+2023-11-28 04:35:27.585 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-28 04:35:27.597 +01:00 [INF] Route matched with {action = "Create", controller = "Rent"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(GtMotive.Estimate.Microservice.Host.Models.Rent.RequestRentDto) on controller GtMotive.Estimate.Microservice.Host.Controller.V1.RentController (GtMotive.Estimate.Microservice.Host).
+2023-11-28 04:35:43.380 +01:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2023-11-28 04:35:43.389 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host) in 15785.164ms
+2023-11-28 04:35:43.394 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-28 04:35:43.396 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 42 - 400 - text/plain;+charset=utf-8 15877.6079ms
+2023-11-28 04:35:43.424 +01:00 [INF] Request starting HTTP/2 GET https://localhost:52322/ - -
+2023-11-28 04:35:43.541 +01:00 [INF] Request finished HTTP/2 GET https://localhost:52322/ - - - 404 0 - 116.5366ms
+2023-11-28 04:35:46.046 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 42
+2023-11-28 04:35:46.062 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-28 04:35:46.063 +01:00 [INF] Route matched with {action = "Create", controller = "Rent"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(GtMotive.Estimate.Microservice.Host.Models.Rent.RequestRentDto) on controller GtMotive.Estimate.Microservice.Host.Controller.V1.RentController (GtMotive.Estimate.Microservice.Host).
+2023-11-28 04:35:55.326 +01:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2023-11-28 04:35:55.327 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host) in 9262.6838ms
+2023-11-28 04:35:55.328 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-28 04:35:55.329 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 42 - 400 - text/plain;+charset=utf-8 9282.7390ms
+2023-11-28 04:36:25.515 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Devolution application/json 20
+2023-11-28 04:36:25.518 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Devolution (GtMotive.Estimate.Microservice.Host)'
+2023-11-28 04:36:25.522 +01:00 [INF] Route matched with {action = "Devolution", controller = "Rent"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Devolution(GtMotive.Estimate.Microservice.Host.Models.Rent.RequestIdRentDto) on controller GtMotive.Estimate.Microservice.Host.Controller.V1.RentController (GtMotive.Estimate.Microservice.Host).
+2023-11-28 04:36:25.536 +01:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2023-11-28 04:36:25.538 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Devolution (GtMotive.Estimate.Microservice.Host) in 14.147ms
+2023-11-28 04:36:25.540 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Devolution (GtMotive.Estimate.Microservice.Host)'
+2023-11-28 04:36:25.541 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Devolution application/json 20 - 400 - text/plain;+charset=utf-8 27.0256ms
+2023-11-28 04:36:31.969 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Devolution application/json 50
+2023-11-28 04:36:31.971 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Devolution (GtMotive.Estimate.Microservice.Host)'
+2023-11-28 04:36:31.972 +01:00 [INF] Route matched with {action = "Devolution", controller = "Rent"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Devolution(GtMotive.Estimate.Microservice.Host.Models.Rent.RequestIdRentDto) on controller GtMotive.Estimate.Microservice.Host.Controller.V1.RentController (GtMotive.Estimate.Microservice.Host).
+2023-11-28 04:36:31.979 +01:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2023-11-28 04:36:31.979 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Devolution (GtMotive.Estimate.Microservice.Host) in 6.6546ms
+2023-11-28 04:36:31.980 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Devolution (GtMotive.Estimate.Microservice.Host)'
+2023-11-28 04:36:31.981 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Devolution application/json 50 - 400 - text/plain;+charset=utf-8 11.4199ms
+2023-11-28 04:37:17.696 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 42
+2023-11-28 04:37:17.700 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-28 04:37:17.701 +01:00 [INF] Route matched with {action = "Create", controller = "Rent"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(GtMotive.Estimate.Microservice.Host.Models.Rent.RequestRentDto) on controller GtMotive.Estimate.Microservice.Host.Controller.V1.RentController (GtMotive.Estimate.Microservice.Host).
+2023-11-28 04:37:20.503 +01:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2023-11-28 04:37:20.504 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host) in 2800.3347ms
+2023-11-28 04:37:20.506 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Create (GtMotive.Estimate.Microservice.Host)'
+2023-11-28 04:37:20.507 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Create application/json 42 - 400 - text/plain;+charset=utf-8 2810.7693ms
+2023-11-28 04:37:47.092 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/_framework/aspnetcore-browser-refresh.js - -
+2023-11-28 04:37:47.098 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/_framework/aspnetcore-browser-refresh.js - - - 200 12402 application/javascript;+charset=utf-8 6.7363ms
+2023-11-28 04:38:20.091 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Devolution application/json 50
+2023-11-28 04:38:20.095 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Devolution (GtMotive.Estimate.Microservice.Host)'
+2023-11-28 04:38:20.096 +01:00 [INF] Route matched with {action = "Devolution", controller = "Rent"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Devolution(GtMotive.Estimate.Microservice.Host.Models.Rent.RequestIdRentDto) on controller GtMotive.Estimate.Microservice.Host.Controller.V1.RentController (GtMotive.Estimate.Microservice.Host).
+2023-11-28 04:38:34.155 +01:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2023-11-28 04:38:34.156 +01:00 [INF] Executed action GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Devolution (GtMotive.Estimate.Microservice.Host) in 14059.0516ms
+2023-11-28 04:38:34.158 +01:00 [INF] Executed endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Devolution (GtMotive.Estimate.Microservice.Host)'
+2023-11-28 04:38:34.159 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Devolution application/json 50 - 200 0 - 14067.7009ms
+2023-11-28 04:38:55.435 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:52323/api/v1/Rent/Devolution application/json 50
+2023-11-28 04:38:55.437 +01:00 [INF] Executing endpoint 'GtMotive.Estimate.Microservice.Host.Controller.V1.RentController.Devolution (GtMotive.Estimate.Microservice.Host)'
+2023-11-28 04:38:55.439 +01:00 [INF] Route matched with {action = "Devolution", controller = "Rent"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Devolution(GtMotive.Estimate.Microservice.Host.Models.Rent.RequestIdRentDto) on controller GtMotive.Estimate.Microservice.Host.Controller.V1.RentController (GtMotive.Estimate.Microservice.Host).
+2023-11-28 05:00:41.256 +01:00 [INF] User profile is available. Using 'C:\Users\ChristianMonzonCerve\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-28 05:00:41.435 +01:00 [INF] Now listening on: https://localhost:52322
+2023-11-28 05:00:41.436 +01:00 [INF] Now listening on: http://localhost:52323
+2023-11-28 05:00:46.368 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/swagger/index.html - -
+2023-11-28 05:00:46.614 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/swagger/index.html - - - 200 - text/html;charset=utf-8 247.8158ms
+2023-11-28 05:00:46.632 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/_vs/browserLink - -
+2023-11-28 05:00:46.634 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/_framework/aspnetcore-browser-refresh.js - -
+2023-11-28 05:00:46.637 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/_framework/aspnetcore-browser-refresh.js - - - 200 12402 application/javascript;+charset=utf-8 2.9319ms
+2023-11-28 05:00:46.675 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 42.9865ms
+2023-11-28 05:00:46.756 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52323/swagger/v1.0.1.0/swagger.json - -
+2023-11-28 05:00:46.844 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:52323/swagger/v1.0.1.0/swagger.json - - - 200 - application/json;charset=utf-8 87.7492ms

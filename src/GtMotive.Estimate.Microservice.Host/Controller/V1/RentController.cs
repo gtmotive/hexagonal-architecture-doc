@@ -4,7 +4,7 @@ using AutoMapper;
 using GtMotive.Estimate.Microservice.Api.Interfaces;
 using GtMotive.Estimate.Microservice.Api.Models;
 using GtMotive.Estimate.Microservice.Host.Mappers;
-using GtMotive.Estimate.Microservice.Host.Models;
+using GtMotive.Estimate.Microservice.Host.Models.Rent;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GtMotive.Estimate.Microservice.Host.Controller.V1
@@ -13,27 +13,54 @@ namespace GtMotive.Estimate.Microservice.Host.Controller.V1
     [Route("api/v1/[controller]")]
     public class RentController : ControllerBase
     {
-        private readonly IRentRepository rentRepository;
+        private readonly IRentBusiness rentRepository;
         private readonly IMapper mapper;
 
-        public RentController(IRentRepository rentRepository)
+        public RentController(IRentBusiness rentRepository)
         {
             this.rentRepository = rentRepository;
             mapper = MapperHostRentConfig.Initialize();
         }
 
         [HttpPost("Create")]
-        public IActionResult Create([FromBody] RequestRentDto rentDto)
+        public IActionResult Create([FromBody] RequestRentDto requestRentDto)
         {
             try
             {
-                if (rentDto == null)
+                if (requestRentDto == null)
                 {
                     return BadRequest("La solicitud no puede ser nula.");
                 }
 
-                var rentApi = mapper.Map<RentApi>(rentDto);
-                return rentRepository.Create(rentApi) ? Ok() : BadRequest();
+                var rentApi = mapper.Map<RentApi>(requestRentDto);
+                var result = rentRepository.Create(rentApi);
+                return result.IsSuccess ? Ok(rentApi) : BadRequest(result.ErrorMessage);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Error interno del servidor: {ex.Message}");
+            }
+        }
+
+        [HttpPost("Devolution")]
+        public IActionResult Devolution([FromBody] RequestIdRentDto requestIdRentDto)
+        {
+            try
+            {
+                if (requestIdRentDto == null)
+                {
+                    return BadRequest("La solicitud no puede ser nula.");
+                }
+
+                var result = rentRepository.Devolution(requestIdRentDto.Id);
+                if (result.IsError)
+                {
+                    return BadRequest(result.ErrorMessage);
+                }
+                else
+                {
+                    return Ok();
+                }
             }
             catch (Exception ex)
             {
@@ -44,17 +71,42 @@ namespace GtMotive.Estimate.Microservice.Host.Controller.V1
         [HttpGet("GetAll")]
         public ActionResult<IEnumerable<RentApi>> GetAll()
         {
-            var rents = rentRepository.GetAll();
-            var responseRentDto = mapper.Map<IEnumerable<ResponseRentDto>>(rents);
-            return Ok(responseRentDto);
+            try
+            {
+                var result = rentRepository.GetAll();
+                var responseRentDto = mapper.Map<IEnumerable<ResponseRentDto>>(result.Data);
+                return Ok(responseRentDto);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Error interno del servidor: {ex.Message}");
+            }
         }
 
         [HttpGet("Get/{id}")]
         public ActionResult<RentApi> Get([FromRoute] string id)
         {
-            var rentApi = rentRepository.GetById(id);
-            var responseRentDto = mapper.Map<ResponseRentDto>(rentApi);
-            return Ok(responseRentDto);
+            try
+            {
+                if (string.IsNullOrEmpty(id))
+                {
+                    return BadRequest("La solicitud no puede ser nula.");
+                }
+
+                var result = rentRepository.GetById(id);
+                if (result.IsError)
+                {
+                    return BadRequest(result.ErrorMessage);
+                }
+                else
+                {
+                    return Ok(result.Data);
+                }
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Error interno del servidor: {ex.Message}");
+            }
         }
     }
 }

@@ -47,7 +47,7 @@ namespace GtMotive.Estimate.Microservice.Host.DependencyInjection
                                         AuthorizationUrl = new Uri($"{settings.JwtAuthority}/connect/authorize"),
                                         Scopes = new Dictionary<string, string>
                                         {
-                                            ["estimate-public-scope"] = "estimate-api"
+                                            ["estimate-public-scope"] = settings.ApiName
                                         },
                                         TokenUrl = new Uri($"{settings.JwtAuthority}/connect/token")
                                     }
@@ -58,7 +58,7 @@ namespace GtMotive.Estimate.Microservice.Host.DependencyInjection
                                     {
                                         Scopes = new Dictionary<string, string>
                                         {
-                                            ["estimate-public-scope"] = "estimate-api"
+                                            ["estimate-public-scope"] = settings.ApiName
                                         },
                                         TokenUrl = new Uri($"{settings.JwtAuthority}/connect/token")
                                     }

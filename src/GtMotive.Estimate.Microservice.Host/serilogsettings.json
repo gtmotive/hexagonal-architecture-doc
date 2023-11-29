@@ -37,5 +37,17 @@
         }
       }
     ]
-  }
+  },
+  "WriteTo": [
+    {
+      "Name": "Console"
+    },
+    {
+      "Name": "File",
+      "Args": {
+        "path": "logs/log.txt",
+        "rollingInterval": "Day"
+      }
+    }
+  ]
 }

@@ -7,5 +7,7 @@ namespace GtMotive.Estimate.Microservice.Host.Configuration
     public sealed class AppSettings
     {
         public string JwtAuthority { get; set; }
+
+        public string ApiName { get; set; }
     }
 }

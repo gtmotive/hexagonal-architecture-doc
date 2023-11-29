@@ -24,12 +24,19 @@ namespace GtMotive.Estimate.Microservice.Api.Repository
         public Result<VehicleApi> Create(VehicleApi vehicleApi)
         {
             var result = new Result<VehicleApi>();
-            vehicleApi?.SetId();
-            var vehicle = mapper.Map<Vehicle>(vehicleApi);
-            if (fileSystemServices.CreateVehicle(vehicle))
+            if (vehicleApi.IsValidDate)
             {
-                var vehicleApiOk = mapper.Map<VehicleApi>(vehicleApi);
-                result.Ok(vehicleApiOk);
+                vehicleApi.SetId();
+                var vehicle = mapper.Map<Vehicle>(vehicleApi);
+                if (fileSystemServices.CreateVehicle(vehicle))
+                {
+                    var vehicleApiOk = mapper.Map<VehicleApi>(vehicleApi);
+                    result.Ok(vehicleApiOk);
+                }
+            }
+            else
+            {
+                result.Error($"El vehículo debe tener una antiguedad menor a {VehicleApi.VALIDATIONYEARS} años");
             }
 
             return result;

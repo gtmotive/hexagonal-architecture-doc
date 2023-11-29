@@ -16,7 +16,7 @@ namespace GtMotive.Estimate.Microservice.Api.Models
 
         public DateTime PurchaseDate { get; set; }
 
-        public bool IsValidDate => ManufactureDate.AddYears(VALIDATIONYEARS) < DateTime.Now;
+        public bool IsValidDate => ManufactureDate.AddYears(VALIDATIONYEARS) >= DateTime.Now;
 
         public void SetId()
         {

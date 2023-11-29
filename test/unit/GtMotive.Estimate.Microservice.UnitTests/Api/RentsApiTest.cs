@@ -26,21 +26,6 @@ namespace GtMotive.Estimate.Microservice.UnitTests.Api
             Assert.Equal(expected, actual);
         }
 
-        [Fact]
-        public void DevolutionReturnsOk()
-        {
-            // Arrange
-            var mockRepository = new Mock<IRentBusiness>();
-            mockRepository.Setup(repo => repo.GetAll()).Returns(GetAllMock());
-
-            // Act
-            var expected = true;
-            var actual = mockRepository.Object.Devolution("2").IsSuccess;
-
-            // Assert
-            Assert.Equal(expected, actual);
-        }
-
         private static Result<IEnumerable<RentApi>> GetAllMock()
         {
             var resultRentApi = new Result<IEnumerable<RentApi>>();

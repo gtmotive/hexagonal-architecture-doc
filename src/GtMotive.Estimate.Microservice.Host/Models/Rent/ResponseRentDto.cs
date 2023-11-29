@@ -8,7 +8,7 @@ namespace GtMotive.Estimate.Microservice.Host.Models.Rent
 
         public string VehicleId { get; set; }
 
-        public int UserId { get; set; }
+        public string UserId { get; set; }
 
         public DateTime InitialDate { get; set; }
 

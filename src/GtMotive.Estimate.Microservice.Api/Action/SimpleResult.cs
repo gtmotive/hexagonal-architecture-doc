@@ -24,7 +24,7 @@ namespace GtMotive.Estimate.Microservice.Api.Action
         public void Error(Exception ex)
         {
             IsSuccess = false;
-            ErrorMessage = ex?.Message;
+            ErrorMessage = ex.Message;
         }
     }
 }

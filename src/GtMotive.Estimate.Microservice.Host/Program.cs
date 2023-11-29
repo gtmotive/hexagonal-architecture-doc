@@ -7,7 +7,6 @@ using GtMotive.Estimate.Microservice.Api;
 using GtMotive.Estimate.Microservice.Host.Configuration;
 using GtMotive.Estimate.Microservice.Host.DependencyInjection;
 using GtMotive.Estimate.Microservice.Infrastructure;
-using GtMotive.Estimate.Microservice.Infrastructure.FileSystem;
 using GtMotive.Estimate.Microservice.Infrastructure.FileSystem.Settings;
 using GtMotive.Estimate.Microservice.Infrastructure.MongoDb.Settings;
 using IdentityServer4.AccessTokenValidation;
@@ -62,7 +61,6 @@ var appSettings = appSettingsSection.Get<AppSettings>();
 
 var fileSystemSettingsSection = builder.Configuration.GetSection("FileSystemSettings");
 builder.Services.Configure<FileSystemSettings>(fileSystemSettingsSection);
-builder.Services.AddScoped<FileSystemServices>();
 
 builder.Services.Configure<MongoDbSettings>(builder.Configuration.GetSection("MongoDb"));
 

@@ -25,7 +25,7 @@ namespace GtMotive.Estimate.Microservice.Api.Repository
         {
             var result = new Result<RentApi>();
 
-            var resultVehicle = GetByIdVehicle(rentDto?.VehicleId);
+            var resultVehicle = GetByIdVehicle(rentDto.VehicleId);
             if (resultVehicle == null)
             {
                 result = CreateElement(rentDto);
@@ -35,9 +35,9 @@ namespace GtMotive.Estimate.Microservice.Api.Repository
                 if (resultVehicle.IsReturned)
                 {
                     // El usuario tiene otro vehiculo?
-                    if (UserHasAnotherReserve(rentDto?.UserId))
+                    if (UserHasAnotherReserve(rentDto.UserId))
                     {
-                        result.Error($"El usuario {rentDto?.UserId} ya tiene una reserva con vehículo id {resultVehicle.Id}");
+                        result.Error($"El usuario {rentDto.UserId} ya tiene una reserva con vehículo id {resultVehicle.Id}");
                         return result;
                     }
                     else
@@ -47,11 +47,11 @@ namespace GtMotive.Estimate.Microservice.Api.Repository
                 }
                 else
                 {
-                    result.Error($"El vehículo {rentDto?.VehicleId} no esta disponible para el alquiler");
+                    result.Error($"El vehículo {rentDto.VehicleId} no esta disponible para el alquiler");
                 }
             }
 
-            result.Error($"El vehículo con id {rentDto?.Id} no está disponible");
+            result.Error($"El vehículo con id {rentDto.Id} no está disponible");
             return result;
         }
 

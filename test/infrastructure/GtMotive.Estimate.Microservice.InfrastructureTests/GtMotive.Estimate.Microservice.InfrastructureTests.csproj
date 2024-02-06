@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="Acheve.TestHost" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="6" />
   </ItemGroup>
 
   <ItemGroup>

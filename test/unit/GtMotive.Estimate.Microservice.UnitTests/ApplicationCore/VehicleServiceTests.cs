@@ -13,16 +13,17 @@ namespace GtMotive.Estimate.Microservice.UnitTests.ApplicationCore
         [Fact]
         public async Task AddVehicleAsyncVehicleIsNewShouldAddVehicle()
         {
-            // Arrange
             var vehicleRepositoryMock = new Mock<IVehicleRepository>();
             var vehicleValidationServiceMock = new Mock<IVehicleValidationService>();
+
+            vehicleValidationServiceMock
+                .Setup(v => v.IsVehicleManufacturedWithin5Years(It.IsAny<int>()))
+                .Returns(true);
             var vehicleService = new VehicleService(vehicleRepositoryMock.Object, vehicleValidationServiceMock.Object);
             var newVehicle = new Vehicle("4546GNL", "VW", "Golf", 2023);
 
-            // Act
             await vehicleService.AddVehicleAsync(newVehicle);
 
-            // Assert
             vehicleRepositoryMock.Verify(v => v.AddAsync(It.IsAny<Vehicle>()), Times.Once);
         }
     }

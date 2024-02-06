@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using GtMotive.Estimate.Microservice.ApplicationCore.Repositories;
-using GtMotive.Estimate.Microservice.Domain.Entities;
+using GtMotive.Estimate.Microservice.Domain.Aggregates;
 using GtMotive.Estimate.Microservice.Infrastructure.InMemoryVehicle;
 using Microsoft.EntityFrameworkCore;
 
@@ -31,14 +31,14 @@ namespace GtMotive.Estimate.Microservice.Infrastructure.InMemoryData
         public async Task<IEnumerable<Rental>> GetByCustomerIdAsync(Guid customerId)
         {
             return await _context.Rentals
-                                 .Where(r => r.CustomerId == customerId)
+                                 .Where(r => r.CustomerId.Equals(customerId))
                                  .ToListAsync();
         }
 
         public async Task<IEnumerable<Rental>> GetActiveRentalsByCustomerId(Guid customerId)
         {
             return await _context.Rentals
-                                 .Where(r => r.CustomerId == customerId && r.IsActive)
+                                 .Where(r => r.CustomerId.Equals(customerId) && r.IsActive)
                                  .ToListAsync();
         }
 

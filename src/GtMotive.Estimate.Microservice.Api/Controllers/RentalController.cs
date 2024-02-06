@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using GtMotive.Estimate.Microservice.ApplicationCore.Services;
-using GtMotive.Estimate.Microservice.Domain.Entities;
+using GtMotive.Estimate.Microservice.Domain.Aggregates;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 

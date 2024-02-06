@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using GtMotive.Estimate.Microservice.ApplicationCore.Interfaces;
 using GtMotive.Estimate.Microservice.ApplicationCore.Repositories;
-using GtMotive.Estimate.Microservice.Domain.Entities;
+using GtMotive.Estimate.Microservice.Domain.Aggregates;
 
 namespace GtMotive.Estimate.Microservice.ApplicationCore.Services
 {
@@ -38,7 +38,7 @@ namespace GtMotive.Estimate.Microservice.ApplicationCore.Services
                 throw new ArgumentNullException(nameof(vehicle), "Vehicle cannot be null.");
             }
 
-            if (!_vehicleValidationService.IsVehicleManufacturedWithin5Years(vehicle.ManufactureYear))
+            if (!_vehicleValidationService.IsVehicleManufacturedWithin5Years(vehicle.ManufactureYear.Value))
             {
                 throw new ArgumentException("Vehicle must be manufactured within the last 5 years.", nameof(vehicle));
             }

@@ -1,6 +1,7 @@
 ﻿using System;
+using GtMotive.Estimate.Microservice.Domain.ValueObjects;
 
-namespace GtMotive.Estimate.Microservice.Domain.Entities
+namespace GtMotive.Estimate.Microservice.Domain.Aggregates
 {
     /// <summary>
     /// Represents a vehicle in the rental fleet.
@@ -14,7 +15,7 @@ namespace GtMotive.Estimate.Microservice.Domain.Entities
         /// <param name="make">The make of the vehicle.</param>
         /// <param name="model">The model of the vehicle.</param>
         /// <param name="manufactureYear">The year of manufacture of the vehicle.</param>
-        public Vehicle(string licensePlate, string make, string model, int manufactureYear)
+        public Vehicle(LicensePlate licensePlate, Make make, Model model, ManufactureYear manufactureYear)
         {
             VehicleId = Guid.NewGuid();
             LicensePlate = licensePlate;
@@ -22,6 +23,10 @@ namespace GtMotive.Estimate.Microservice.Domain.Entities
             Model = model;
             ManufactureYear = manufactureYear;
             IsAvailable = true;
+        }
+
+        private Vehicle()
+        {
         }
 
         /// <summary>
@@ -32,22 +37,22 @@ namespace GtMotive.Estimate.Microservice.Domain.Entities
         /// <summary>
         /// Gets the license plate of the vehicle.
         /// </summary>
-        public string LicensePlate { get; private set; }
+        public LicensePlate LicensePlate { get; private set; }
 
         /// <summary>
         /// Gets the make of the vehicle.
         /// </summary>
-        public string Make { get; private set; }
+        public Make Make { get; private set; }
 
         /// <summary>
         /// Gets the model of the vehicle.
         /// </summary>
-        public string Model { get; private set; }
+        public Model Model { get; private set; }
 
         /// <summary>
         /// Gets the year of manufacture of the vehicle.
         /// </summary>
-        public int ManufactureYear { get; private set; }
+        public ManufactureYear ManufactureYear { get; private set; }
 
         /// <summary>
         /// Gets a value indicating whether the vehicle is available for rental.

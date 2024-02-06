@@ -2,7 +2,8 @@
 using GtMotive.Estimate.Microservice.ApplicationCore.Interfaces;
 using GtMotive.Estimate.Microservice.ApplicationCore.Repositories;
 using GtMotive.Estimate.Microservice.ApplicationCore.Services;
-using GtMotive.Estimate.Microservice.Domain.Entities;
+using GtMotive.Estimate.Microservice.Domain.Aggregates;
+using GtMotive.Estimate.Microservice.Domain.ValueObjects;
 using Moq;
 using Xunit;
 
@@ -20,7 +21,11 @@ namespace GtMotive.Estimate.Microservice.UnitTests.ApplicationCore
                 .Setup(v => v.IsVehicleManufacturedWithin5Years(It.IsAny<int>()))
                 .Returns(true);
             var vehicleService = new VehicleService(vehicleRepositoryMock.Object, vehicleValidationServiceMock.Object);
-            var newVehicle = new Vehicle("4546GNL", "VW", "Golf", 2023);
+            var licensePlate = new LicensePlate("4546GNL");
+            var make = new Make("VW");
+            var model = new Model("Golf");
+            var manufactureYear = new ManufactureYear(2023);
+            var newVehicle = new Vehicle(licensePlate, make, model, manufactureYear);
 
             await vehicleService.AddVehicleAsync(newVehicle);
 

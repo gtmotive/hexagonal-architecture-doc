@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using GtMotive.Estimate.Microservice.Domain.Entities;
+using GtMotive.Estimate.Microservice.Domain.Aggregates;
 
 namespace GtMotive.Estimate.Microservice.ApplicationCore.Repositories
 {
@@ -42,5 +42,11 @@ namespace GtMotive.Estimate.Microservice.ApplicationCore.Repositories
         /// </summary>
         /// <returns>The collection of vehicles that are available for rental.</returns>
         Task<IEnumerable<Vehicle>> GetAvailableVehiclesAsync();
+
+        /// <summary>
+        /// Retrieves the count of vehicles in the repository.
+        /// </summary>
+        /// <returns>The count of vehicle in the repository.</returns>
+        Task<int> CountAsync();
     }
 }

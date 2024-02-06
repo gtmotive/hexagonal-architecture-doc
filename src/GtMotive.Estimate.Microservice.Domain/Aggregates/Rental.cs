@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GtMotive.Estimate.Microservice.Domain.Entities
+namespace GtMotive.Estimate.Microservice.Domain.Aggregates
 {
     /// <summary>
     /// Represents a rental agreement for a vehicle.
@@ -21,6 +21,10 @@ namespace GtMotive.Estimate.Microservice.Domain.Entities
             StartDate = startDate;
             EndDate = null;
             IsActive = true;
+        }
+
+        private Rental()
+        {
         }
 
         /// <summary>

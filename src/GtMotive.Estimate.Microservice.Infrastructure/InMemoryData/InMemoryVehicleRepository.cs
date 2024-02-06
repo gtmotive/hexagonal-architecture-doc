@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using GtMotive.Estimate.Microservice.ApplicationCore.Repositories;
-using GtMotive.Estimate.Microservice.Domain.Entities;
+using GtMotive.Estimate.Microservice.Domain.Aggregates;
 using Microsoft.EntityFrameworkCore;
 
 namespace GtMotive.Estimate.Microservice.Infrastructure.InMemoryVehicle
@@ -54,6 +54,11 @@ namespace GtMotive.Estimate.Microservice.Infrastructure.InMemoryVehicle
             return await _context.Vehicles
                                  .Where(v => v.IsAvailable)
                                  .ToListAsync();
+        }
+
+        public async Task<int> CountAsync()
+        {
+            return await _context.Vehicles.CountAsync();
         }
     }
 }
